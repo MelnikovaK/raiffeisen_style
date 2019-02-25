@@ -1,0 +1,39 @@
+
+<!-- mixin menu()-->
+<!--   for item in menu_items-->
+<!--       - var classes = ['menu__item'];-->
+<!--       - if(item.title) {-->
+<!--           p(class = classes)-->
+<!--             a(href=item.url) #{item.title} -->
+<!--       - }-->
+<!--   +btns()-->
+<!-- mixin menu__item(content,params)
+// li.menu__item&attributs(attributs)
+  // if content.href
+    // a(href=content.href).menu__item-link!=content.title   
+-->
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Melnikova"/>
+    <title></title>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__item-link" href="#">Сохранить и Преумножить</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Получить финансирование</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Решение для вашего бизнеса</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Рассчетно-кассовое обслуживание</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Решение для вашей семьи/Консалтинг</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Сохранить и Преумножить</a></li>
+          <li class="menu__item menu__item_line"></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">О нас</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="#">Контактная информация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

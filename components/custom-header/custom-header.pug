@@ -1,0 +1,14 @@
+-
+  var select_items = [
+  {default_value: 'RU'},
+  {value: 'ru', name: 'RU'},
+  {value: 'en', name: 'EN'}
+  ];
+  var default_language = 'RU'
+mixin custom-header(content,params)
+  custom-header&attributes(attributes)
+    +logo()
+    .custom-header__contacts +7 (495) 662 76 77
+    .custom-header__line
+    label.select-label #{default_language}
+    +select(select_items)

@@ -1,0 +1,5 @@
+mixin select(content,params)
+  select&attributes(attributes)
+    ul.select__select-list
+      each item in content
+        li.select__select-item #{item.name}

@@ -1,0 +1,24 @@
+.menu {
+	float: right;
+	width: $MENU-WIDTH;
+	height: 100%;
+	background: $MENU-COLOR;
+
+	&__item {
+		margin: 0;
+		margin-left: $MENU-ITEM-MARGIN-LEFT;
+		margin-top: $MENU-ITEM-MARGIN;
+
+		font-family: 'Futura New Book';
+ 		src: url('../../styles/fonts/hinted-FuturaNewBook-Reg.woff2') format('woff2'),
+        url('../../styles/fonts/hinted-FuturaNewBook-Reg.woff') format('woff'),
+        url('../../styles/fonts/hinted-FuturaNewBook-Reg.ttf') format('truetype');
+ 		font-weight: normal;
+    font-style: normal;
+    font-size: 21px;
+		a {
+			text-decoration: none;
+			color: $TEXT-COLOR;	
+		}
+	}
+}

@@ -1,0 +1,19 @@
+include components/components
+
+block setup     
+html
+  head
+    link(rel="stylesheet", href="styles/styles.css")
+    meta(charset="utf-8")
+    meta(name="author", content="Melnikova")
+    block title
+      title=title
+
+  body
+    block page
+    +page
+      +custom-header()
+      +inner-block()
+      +menu(0)
+
+      block content

@@ -1,0 +1,37 @@
+-
+  var info = {
+    "title":"Сохранить и преумножить",
+    "list" : [
+      {
+        "text":"Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.", 
+      },
+      {
+        "text":"Ut nec vide ubique vivendum, dicat mentitum ne sit. Dico ferri errem ea vix, timeam posidonium nam id. Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.", 
+      },
+      {
+        "text":"In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur. Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu, id mea dolorem verterem. Albucius eligendi temporibus eu nam.", 
+      },
+      {
+        "text":"Ei sed tamquam pericula, ut pro aeque iusto vocent. Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem deseruisse necessitatibus. Omnes facilisis reformidans ei est, sed nibh consequuntur et. Ad eam ullum dolorem dissentias. At cum modo commune deterruisset. Est ut novum harum euripidis. Ut reque dicam pri. Et autem epicuri eum, et eum illum velit. Populo diceret euismod an vim."
+      }
+      ],
+    "image":{
+      "src":"assets/image.jpg",
+      "alt":"картинка 1"
+    }
+  } 
+
+
+mixin inner-block(content,params)
+  inner-block&attributes(attributes)
+    .inner-block__image
+      img(src=info.image.src alt=info.image.alt)
+    .inner-block__info
+      h1.inner-block__title!=info.title
+      +inner-block__text(info.list)
+        
+
+mixin inner-block__text(content, params)
+  .inner-block__text&attributes(attributes)
+    each item in content
+      p.inner-block__text-item&attributes(attributes)!=item.text
