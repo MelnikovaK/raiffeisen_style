@@ -13,11 +13,14 @@
 
 
 
-mixin menu(content,params)
+mixin menu(menu_active_item,content,params)
   nav.menu&attributes(attributes)
     ul.menu__list
       each item in menu_items
-        +menu__item(item)
+        if ( menu_items[menu_active_item] == item) 
+          +menu__item(item, true)
+        else 
+          +menu__item(item, false)
     +raiffeisen-btns
     +footer()
 
@@ -26,7 +29,10 @@ mixin menu(content,params)
 mixin menu__item(content,params)
   if content.href
     li.menu__item&attributes(attributes)
-      a(href=content.href).menu__item-link!=content.title  
+      if (params) 
+        a(href=content.href).menu__item-link_active!=content.title  
+      else
+        a(href=content.href).menu__item-link!=content.title  
   else
     li.menu__item.menu__item_line
 
