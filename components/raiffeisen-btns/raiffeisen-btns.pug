@@ -1,9 +1,11 @@
--
-  var buttons_params = [
-    {class: 'raiffeisen-btns__online', name: 'Raiffeisen.Online'},
-    {class: 'raiffeisen-btns__dealer', name: 'R.Dealer'},
-  ];
+// -
+//   var buttons_params = [
+//     {class: 'raiffeisen-btns__item raiffeisen-btns__item_online', name: 'Raiffeisen.Online'},
+//     {class: 'raiffeisen-btns__item raiffeisen-btns__item_dealer', name: 'R.Dealer'},
+//   ];
 mixin raiffeisen-btns(content, params)
   .raiffeisen-btns&attributes(attributes)
-    each button in buttons_params
-      +button(button)
+    a(class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#") Raiffeisen.Online
+    a(class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#") R.Dealer
+    //- each button in buttons_params
+    //-   +button(button)
