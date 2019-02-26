@@ -1,15 +1,4 @@
 .raiffeisen-btns {
-  @mixin online_btn_hover{
-    .raiffeisen-btns__item_online:hover &{
-      @content;
-    }
-  }
-
-  @mixin dealer_btn_hover{
-    .raiffeisen-btns__item_dealer:hover &{
-      @content;
-    }
-  }
 
   display: block;
   margin: $BUTTONS-MARGIN $BUTTONS-MARGIN-LEFT;  
@@ -21,29 +10,24 @@
     text-align: center;
     text-decoration: none;
     border: 1px solid $NORMAL_BUTTON_COLOR;
+    transition: background .3s, color .3s, border .3s;
 
+    &:hover {
+      background-color: $HOVER_BUTTON_COLOR;
+      color: #ffffff;
+      border-color: $HOVER_BUTTON_COLOR;
+    }
 
     &_online {
       width: 120px;
       color: #ffffff;
       background-color: $NORMAL_BUTTON_COLOR;
-
-      transition: color .3s;
-      @include online_btn_hover{
-        color: $HOVER_BUTTON_COLOR; 
-      }
     }
+    
 
     &_dealer {
       width: 70px;
       color: $TEXT-COLOR;
-
-      transition: color .3s;
-      @include dealer_btn_hover{
-        color: $HOVER_BUTTON_COLOR; 
-      }
     }
   }
-  
 }
-

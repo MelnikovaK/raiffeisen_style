@@ -357,24 +357,21 @@ template {
     line-height: 35px;
     text-align: center;
     text-decoration: none;
-    border: 1px solid #b3aaaf; }
+    border: 1px solid #b3aaaf;
+    -webkit-transition: background .3s, color .3s, border .3s;
+    -o-transition: background .3s, color .3s, border .3s;
+    transition: background .3s, color .3s, border .3s; }
+    .raiffeisen-btns__item:hover {
+      background-color: #6d5b66;
+      color: #ffffff;
+      border-color: #6d5b66; }
     .raiffeisen-btns__item_online {
       width: 120px;
       color: #ffffff;
-      background-color: #b3aaaf;
-      -webkit-transition: color .3s;
-      -o-transition: color .3s;
-      transition: color .3s; }
-      .raiffeisen-btns__item_online:hover .raiffeisen-btns__item_online {
-        color: #6d5b66; }
+      background-color: #b3aaaf; }
     .raiffeisen-btns__item_dealer {
       width: 70px;
-      color: #4c3440;
-      -webkit-transition: color .3s;
-      -o-transition: color .3s;
-      transition: color .3s; }
-      .raiffeisen-btns__item_dealer:hover .raiffeisen-btns__item_dealer {
-        color: #6d5b66; }
+      color: #4c3440; }
 
 .inner-block {
   float: left; }
