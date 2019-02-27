@@ -1,0 +1,37 @@
+.custom-header {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: $HEADER-WIDTH;
+  height: $HEADER-HEIGHT;
+
+  &__container {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: inherit;
+  }
+  
+  &__contacts {
+    position: absolute;
+    top: 50px;
+    @extend %PHONE;
+
+    &:after {
+      height: 40px;
+      margin-left: 25px;
+      border-left: 2px solid $BASE-COLOR;       
+      content: "";
+      opacity: 0.2;
+
+    }
+  }
+
+  &__select-label {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 52px;
+    @extend %LANGUAGE;
+  }
+}

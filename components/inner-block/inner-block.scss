@@ -1,3 +1,31 @@
 .inner-block {
-	float: left;
+  position: absolute;
+  top: $HEADER-HEIGHT;
+  width: $INNER-BLOCK-WIDTH;
+
+  &__image {
+    float: left;
+
+  }
+
+  &__info {
+
+  }
+
+  &__title {
+    margin: 45px 0;
+    text-align: center;
+    @extend %H2;
+  }
+
+  &__column {
+    margin: 0 40px;
+    width: 330px;
+    display: inline-block;
+  }
+
+  &__text {
+    display: inline-block;
+    @extend %TEXT;
+  }
 }

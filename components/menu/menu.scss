@@ -11,7 +11,9 @@
     }
   }
 
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: $MENU-WIDTH;
   height: 100%;
   background: $MENU-COLOR;
@@ -22,28 +24,29 @@
   }
 
   &__item {
-    margin: $MENU-ITEM-MARGIN 0 ;  
-    font-size: 21px;
+    @extend %MENU-ITEM;
+    margin: $MENU-ITEM-MARGIN 0;
   }
 
   &__item_line {
     height: 1px;
     width: 64px;
-    background: $TEXT-COLOR;
+    background: $BASE-COLOR;
     opacity: 0.2;
   }
     
   &__item-link {
     position: relative;
     text-decoration: none;
-    color: rgba($TEXT-COLOR,1); 
-    transition: color .3s;
+    color: rgba($BASE-COLOR,1); 
+    transition: color .3s, font-weight .3s;
     @include hover{
-      color: rgba($TEXT-COLOR,0.5); 
+      color: rgba($BASE-COLOR,0.5); 
     }
       
     @include active{
-      color: rgba($TEXT-COLOR,0.5); 
+      color: rgba($BASE-COLOR,0.5); 
+      font-weight: bold;
     }
     &:after{
       content: "";
@@ -52,7 +55,7 @@
       bottom: 0;
       opacity: 0;
       width: 100%;
-      border-bottom: 10px solid rgba($TEXT-COLOR,0.2);
+      border-bottom: 10px solid rgba($BASE-COLOR,0.2);
       transition: opacity .3s;
 
       @include active{

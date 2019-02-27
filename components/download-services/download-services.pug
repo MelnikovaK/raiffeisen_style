@@ -1,5 +1,4 @@
 mixin download-services(content,params)
-  download-services&attributes(attributes)
-  .download-services__icon 
-    img(src='assets/iconpdf.png')
-  .download-services__link Скачать «Услуги FWR»
+  a(href="#").download-services&attributes(attributes)
+    img(src='assets/iconpdf.png').download-services__icon 
+    span.download-services__text Скачать «Услуги FWR» 

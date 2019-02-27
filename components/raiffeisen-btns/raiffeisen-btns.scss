@@ -1,7 +1,7 @@
 .raiffeisen-btns {
 
   display: block;
-  margin: $BUTTONS-MARGIN $BUTTONS-MARGIN-LEFT;  
+  margin: $BUTTONS-MARGIN-TOP $BUTTONS-MARGIN-LEFT $BUTTONS-MARGIN-BOTTOM;  
 
   &__item {
     display: inline-block;
@@ -12,6 +12,8 @@
     border: 1px solid $NORMAL_BUTTON_COLOR;
     transition: background .3s, color .3s, border .3s;
 
+    @extend %RAIFFEISEN-BTN;
+    
     &:hover {
       background-color: $HOVER_BUTTON_COLOR;
       color: #ffffff;
@@ -27,7 +29,7 @@
 
     &_dealer {
       width: 70px;
-      color: $TEXT-COLOR;
+      color: $BASE-COLOR;
     }
   }
 }

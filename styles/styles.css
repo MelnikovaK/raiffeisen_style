@@ -1,3 +1,22 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'FuturaNew';
+  src: url("fonts/hinted-FuturaNewBook-Reg.woff2") format("woff2"), url("fonts/hinted-FuturaNewBook-Reg.woff") format("woff"), url("fonts/hinted-FuturaNewBook-Reg.svg#FuturaNewBook-Reg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FuturaNew';
+  src: url("fonts/hinted-FuturaNewLight-Reg.woff2") format("woff2"), url("fonts/hinted-FuturaNewLight-Reg.woff") format("woff"), url("fonts/hinted-FuturaNewLight-Reg.svg#FuturaNewLight-Reg") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FuturaNew';
+  src: url("fonts/hinted-FuturaNewDemi-Reg.woff2") format("woff2"), url("fonts/hinted-FuturaNewDemi-Reg.woff") format("woff"), url("fonts/hinted-FuturaNewDemi-Reg.svg#FuturaNewDemi-Reg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -301,8 +320,172 @@ template {
 [hidden] {
   display: none; }
 
+/**
+ * breakpoints
+ */
+/**
+ * font-family
+ */
+/**
+ * color
+ */
+/**
+ * z-layer
+ */
+/**
+ * font-weight
+ */
+/**
+ * other
+ */
+/**
+ * Обычный текст
+ */
+.page {
+  font-family: FuturaNew, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.44;
+  color: #000000; }
+  @media screen and (min-width: 1600px) {
+    .page {
+      font-size: 18px;
+      line-height: 1.5; } }
+
+/**
+ * заголовок
+ */
+.inner-block__title {
+  font-size: 36px;
+  line-height: 1.12;
+  font-weight: 100;
+  color: #4c3440; }
+  @media screen and (min-width: 1600px) {
+    .inner-block__title {
+      font-size: 48px; } }
+
+/**
+ * контактная информация
+ */
+.custom-header__contacts {
+  font-size: 24px;
+  line-height: 0.84;
+  font-weight: 100;
+  color: #231f20; }
+  @media screen and (min-width: 1600px) {
+    .custom-header__contacts {
+      font-size: 32px; } }
+
+/**
+ * кнопка в меню
+ */
+.raiffeisen-btns__item {
+  font-size: 14px;
+  line-height: 1.28;
+  font-weight: 100;
+  color: #4c3440; }
+  @media screen and (max-width: 767px) {
+    .raiffeisen-btns__item {
+      font-size: 15.75px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .raiffeisen-btns__item {
+      font-size: 16px;
+      line-height: 1.16; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .raiffeisen-btns__item {
+      font-size: 12px;
+      line-height: 1.12; } }
+
+/**
+ * ссылка для загрузки
+ */
+.download-services__text {
+  font-size: 14px;
+  line-height: 1.92;
+  font-weight: 100;
+  color: #4c3440; }
+  @media screen and (max-width: 767px) {
+    .download-services__text {
+      font-size: 12px;
+      line-height: 1; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .download-services__text {
+      font-size: 14px;
+      line-height: 1.92; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .download-services__text {
+      font-size: 10.5px;
+      line-height: 1.95; } }
+  @media screen and (min-width: 1600px) {
+    .download-services__text {
+      font-size: 14px;
+      line-height: 1.92; } }
+
+/**
+ * текст в футере
+ */
+.footer__text {
+  font-size: 12px;
+  line-height: 2.25;
+  font-weight: 100;
+  color: #000000; }
+  @media screen and (max-width: 767px) {
+    .footer__text {
+      font-size: 10px;
+      line-height: 1.2; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer__text {
+      line-height: 2.33; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .footer__text {
+      font-size: 9px; } }
+
+/**
+ * основной текст страницы
+ */
+.inner-block__text {
+  font-size: 14px;
+  line-height: 1.44;
+  font-weight: 100;
+  color: #4c3440; }
+  @media screen and (min-width: 1600px) {
+    .inner-block__text {
+      font-size: 18px;
+      line-height: 1.5; } }
+
+/**
+ * селектор языка
+ */
+.custom-header__select-label {
+  font-size: 10,5px;
+  line-height: 1,92;
+  font-weight: 100;
+  color: #4c3440; }
+  @media screen and (min-width: 1600px) {
+    .custom-header__select-label {
+      font-size: 14px; } }
+
+/**
+ * пункт меню
+ */
+.menu__item {
+  font-size: 21px;
+  line-height: 1.14;
+  color: #4c3440; }
+  @media screen and (max-width: 767px) {
+    .menu__item {
+      font-size: 18px;
+      line-height: 1; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .menu__item {
+      line-height: 1.18; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .menu__item {
+      font-size: 15.75px; } }
+
 .menu {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 290px;
   height: 100%;
   background: #f2f1f1; }
@@ -310,8 +493,7 @@ template {
     padding: 0 50px;
     list-style: none; }
   .menu__item {
-    margin: 30px 0;
-    font-size: 21px; }
+    margin: 30px 0; }
   .menu__item_line {
     height: 1px;
     width: 64px;
@@ -321,13 +503,14 @@ template {
     position: relative;
     text-decoration: none;
     color: #4c3440;
-    -webkit-transition: color .3s;
-    -o-transition: color .3s;
-    transition: color .3s; }
+    -webkit-transition: color .3s, font-weight .3s;
+    -o-transition: color .3s, font-weight .3s;
+    transition: color .3s, font-weight .3s; }
     .menu__item:hover .menu__item-link {
       color: rgba(76, 52, 64, 0.5); }
     .menu__item_active .menu__item-link {
-      color: rgba(76, 52, 64, 0.5); }
+      color: rgba(76, 52, 64, 0.5);
+      font-weight: bold; }
     .menu__item-link:after {
       content: "";
       position: absolute;
@@ -342,15 +525,79 @@ template {
       .menu__item_active .menu__item-link:after {
         opacity: 1; }
 
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 240px;
+  height: 90px; }
+
+.inner-block {
+  position: absolute;
+  top: 155px;
+  width: 1310px; }
+  .inner-block__image {
+    float: left; }
+  .inner-block__title {
+    margin: 45px 0;
+    text-align: center; }
+  .inner-block__column {
+    margin: 0 40px;
+    width: 330px;
+    display: inline-block; }
+  .inner-block__text {
+    display: inline-block; }
+
+.custom-header {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 1310px;
+  height: 155px; }
+  .custom-header__container {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: inherit; }
+  .custom-header__contacts {
+    position: absolute;
+    top: 50px; }
+    .custom-header__contacts:after {
+      height: 40px;
+      margin-left: 25px;
+      border-left: 2px solid #4c3440;
+      content: "";
+      opacity: 0.2; }
+  .custom-header__select-label {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 52px; }
+
 .page {
+  position: relative;
   background-color: #f9f9f8;
   height: 100%;
   width: 100%;
-  border: 22px solid white; }
+  border: 22px solid white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: #f8f7f7;
+  padding-top: 30px; }
+  .footer__text {
+    margin: 30px 40px;
+    font-size: 12px;
+    color: black;
+    opacity: 0.5; }
 
 .raiffeisen-btns {
   display: block;
-  margin: 70px 45px; }
+  margin: 65px 45px 45px; }
   .raiffeisen-btns__item {
     display: inline-block;
     height: 35px;
@@ -374,4 +621,48 @@ template {
       color: #4c3440; }
 
 .inner-block {
-  float: left; }
+  position: absolute;
+  top: 155px;
+  width: 1310px; }
+  .inner-block__image {
+    float: left; }
+  .inner-block__title {
+    margin: 45px 0;
+    text-align: center; }
+  .inner-block__column {
+    margin: 0 40px;
+    width: 330px;
+    display: inline-block; }
+  .inner-block__text {
+    display: inline-block; }
+
+.download-services {
+  margin: 0 40px; }
+  .download-services__icon {
+    width: 50px;
+    height: 40px;
+    display: inline-block; }
+  .download-services__text {
+    position: absolute;
+    display: inline-block;
+    margin: 14px 10px;
+    font-size: 14px;
+    color: #4c3440;
+    text-decoration: none;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s; }
+    .download-services:hover .download-services__text {
+      opacity: 0.5; }
+    .download-services__text:after {
+      content: "";
+      position: absolute;
+      opacity: 1;
+      width: 100%;
+      height: 1px;
+      background: url("dots.png");
+      -webkit-transition: opacity .3s;
+      -o-transition: opacity .3s;
+      transition: opacity .3s; }
+      .download-services:hover .download-services__text:after {
+        opacity: 0; }

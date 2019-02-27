@@ -1,0 +1,152 @@
+/**
+ * Обычный текст
+ */
+%DEFAULT {
+  font-family: $FuturaNew;
+  font-size: 14px;
+  line-height: 1.44;
+  color: $BLACK;
+  @include DESKTOP {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+/**
+ * заголовок
+ */
+%H2 {
+  font-size: 36px;
+  line-height: 1.12;
+  font-weight: 100;
+  color: $BASE-COLOR;
+  @include DESKTOP {
+    font-size: 48px;
+  }
+}
+
+/**
+ * контактная информация
+ */
+%PHONE {
+  font-size: 24px;
+  line-height: 0.84;
+  font-weight: 100;
+  color: $DARK-BROWN;
+  @include DESKTOP {
+    font-size: 32px;
+  }
+}
+
+/**
+ * кнопка в меню
+ */
+%RAIFFEISEN-BTN {
+  font-size: 14px;
+  line-height: 1.28;
+  font-weight: 100;
+  color: $BASE-COLOR;
+  @include MOBILE {
+    font-size: 15.75px;
+  }
+  @include TABLET {
+    font-size: 16px;
+    line-height: 1.16;
+  }
+  @include TABLET-L {
+    font-size: 12px;
+    line-height: 1.12;
+  }
+}
+
+/**
+ * ссылка для загрузки
+ */
+%FOOTER-LINK {
+  font-size: 14px;
+  line-height: 1.92;
+  font-weight: 100;
+  color: $BASE-COLOR;
+  @include MOBILE {
+    font-size: 12px;
+    line-height: 1;
+  }
+  @include TABLET {
+    font-size: 14px;
+    line-height: 1.92;
+  }
+  @include TABLET-L {
+    font-size: 10.5px;
+    line-height: 1.95;
+  }
+  @include DESKTOP {
+    font-size: 14px;
+    line-height: 1.92;
+  }
+}
+
+/**
+ * текст в футере
+ */
+%FOOTER-TEXT {
+  font-size: 12px;
+  line-height: 2.25;
+  font-weight: 100;
+  color: $BLACK;
+  @include MOBILE {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  @include TABLET {
+    line-height: 2.33;
+  }
+  @include TABLET-L {
+    font-size: 9px;
+  }
+}
+
+/**
+ * основной текст страницы
+ */
+%TEXT {
+  font-size: 14px;
+  line-height: 1.44;
+  font-weight: 100;
+  color: $BASE-COLOR;
+  @include DESKTOP {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+/**
+ * селектор языка
+ */
+%LANGUAGE {
+  font-size: 10,5px;
+  line-height: 1,92;
+  font-weight: 100;
+  color: $BASE-COLOR;
+  @include DESKTOP {
+    font-size: 14px;
+  }
+}
+
+/**
+ * пункт меню
+ */
+%MENU-ITEM {
+  font-size: 21px;
+  line-height: 1.14;
+  color: $BASE-COLOR;
+  @include MOBILE {
+    font-size: 18px;
+    line-height: 1;
+  }
+  @include TABLET {
+    line-height: 1.18;
+  }
+  @include TABLET-L {
+    font-size: 15.75px;
+  }
+}

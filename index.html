@@ -13,31 +13,38 @@
   </head>
   <body>
     <div class="page">
-      <custom-header>
-        <logo><img src="assets/logo.jpg"/></logo>
-        <div class="custom-header__contacts">+7 (495) 662 76 77</div>
-        <div class="custom-header__line"></div>
-        <label class="select-label">RU</label>
-        <select>
-          <ul class="select__select-list">
-            <li class="select__select-item"></li>
-            <li class="select__select-item">RU</li>
-            <li class="select__select-item">EN</li>
-          </ul>
-        </select>
-      </custom-header>
-      <inner-block>
-        <div class="inner-block__image"><img src="assets/image.jpg" alt="картинка 1"/></div>
+      <div class="custom-header">
+        <div class="logo"><img src="assets/logo.svg"/></div>
+        <div class="custom-header__container">
+          <div class="custom-header__contacts">+7 (495) 662 76 77</div>
+          <div class="custom-header__line"></div>
+          <label class="custom-header__select-label">RU
+            <select class="select">
+              <ul class="select__select-list">
+                <li class="select__select-item"></li>
+                <li class="select__select-item">RU</li>
+                <li class="select__select-item">EN</li>
+              </ul>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="inner-block">
+        <div class="inner-block__image"><img src="assets/image.png" alt="картинка 1"/></div>
         <div class="inner-block__info">
           <h1 class="inner-block__title">Сохранить и преумножить</h1>
           <div class="inner-block__text">
-            <p class="inner-block__text-item">Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.</p>
-            <p class="inner-block__text-item">Ut nec vide ubique vivendum, dicat mentitum ne sit. Dico ferri errem ea vix, timeam posidonium nam id. Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.</p>
-            <p class="inner-block__text-item">In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur. Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu, id mea dolorem verterem. Albucius eligendi temporibus eu nam.</p>
-            <p class="inner-block__text-item">Ei sed tamquam pericula, ut pro aeque iusto vocent. Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem deseruisse necessitatibus. Omnes facilisis reformidans ei est, sed nibh consequuntur et. Ad eam ullum dolorem dissentias. At cum modo commune deterruisset. Est ut novum harum euripidis. Ut reque dicam pri. Et autem epicuri eum, et eum illum velit. Populo diceret euismod an vim.</p>
+            <div class="inner-block__column">
+              <p class="inner-block__text-item">Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.Ut nec vide ubique vivendum, dicat mentitum ne sit. Dico ferri errem ea vix, timeam posidonium nam id.</p>
+              <p class="inner-block__text-item"> Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur.</p>
+            </div>
+            <div class="inner-block__column">
+              <p class="inner-block__text-item"> Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu, id mea dolorem verterem. Albucius eligendi temporibus eu nam.</p>
+              <p class="inner-block__text-item">Ei sed tamquam pericula, ut pro aeque iusto vocent. Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem d</p>
+            </div>
           </div>
         </div>
-      </inner-block>
+      </div>
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item"><a class="menu__item-link" href="#">Сохранить и Преумножить</a></li>
@@ -51,10 +58,7 @@
           <li class="menu__item"><a class="menu__item-link" href="#">Контактная информация</a></li>
         </ul>
         <div class="raiffeisen-btns"><a class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#">Raiffeisen.Online</a><a class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#">R.Dealer</a></div>
-        <footer>
-          <download-services></download-services>
-          <div class="download-services__icon"> <img src="assets/iconpdf.png"/></div>
-          <div class="download-services__link">Скачать «Услуги FWR»</div>
+        <footer class="footer"><a class="download-services" href="#"><img class="download-services__icon" src="assets/iconpdf.png"/><span class="download-services__text">Скачать «Услуги FWR» </span></a>
           <div class="footer__text">© 2009-2017 АО «Райффайзенбанк»</div>
         </footer>
       </nav>
