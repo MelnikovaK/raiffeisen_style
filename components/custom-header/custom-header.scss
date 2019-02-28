@@ -1,37 +1,80 @@
 .custom-header {
+  %SELECTOR {
+    position: absolute;
+    left: 22px;
+    width: 15px;
+    height: 10px;
+    content: "";
+    background:url('../assets/selector.png') no-repeat;
+  }
+
   position: absolute;
   display: block;
   top: 0;
-  width: $HEADER-WIDTH;
-  height: $HEADER-HEIGHT;
+
+  @extend %CUSTOM-HEADER-COMPONENT;
 
   &__container {
     position: absolute;
-    right: 0;
-    width: 400px;
     height: inherit;
+    @extend %HEADER-CONTAINER-COMPONENT;
   }
   
   &__contacts {
     position: absolute;
-    top: 50px;
     @extend %PHONE;
+    @extend %CONTACTS-COMPONENT;
 
     &:after {
-      height: 40px;
-      margin-left: 25px;
       border-left: 2px solid $BASE-COLOR;       
       content: "";
       opacity: 0.2;
-
+      @extend %HEADER-LINE-COMPONENT;
     }
   }
 
-  &__select-label {
+  &__language {
     position: absolute;
     display: inline-block;
-    right: 20px;
-    top: 52px;
+    cursor: pointer;
+    opacity: 0.7;
+
     @extend %LANGUAGE;
+    @extend %LANGUAGE-COMPONENT;
+
+    &:after {
+      @extend %SELECTOR;
+      bottom: 4px;
+
+    }
+
+    &_opened {
+      &:after {
+        @extend %SELECTOR;
+        bottom: 8px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg)
+      } 
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    font-size: 12px;
+    right: 15px;
+    top: 45px;
+    opacity: 0.7;
+    &:before {   
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -30px;
+      content: "";
+      background:url('../assets/menu.png') no-repeat;
+    }
   }
 }

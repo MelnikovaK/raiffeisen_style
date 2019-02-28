@@ -4,7 +4,7 @@
     "list" : [
       [
         {
-          "text": "Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.Ut nec vide ubique vivendum, dicat mentitum ne sit. Dico ferri errem ea vix, timeam posidonium nam id.", 
+          "text": "Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.Ut nec vide ubique vivendum, dicat mentitum ne sit.", 
         },
         {
           "text": " Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur.", 
@@ -12,10 +12,17 @@
       ],
       [
         {
-          "text": " Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu, id mea dolorem verterem. Albucius eligendi temporibus eu nam.", 
+          "text": " Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu", 
         },
         {
-          "text": "Ei sed tamquam pericula, ut pro aeque iusto vocent. Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem d"
+          "text": ", id mea dolorem verterem. Albucius eligendi temporibus eu nam. Ei sed tamquam pericula, ut pro aeque iusto vocent Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem d. ",
+        },
+        {
+          "text": "Узнать об инвестиционных решениях  Friderich Riaffeisen ",
+          "link" : {
+            "href": "#",
+            "content": "в Вене"
+          }
         }
       ]
     ],
@@ -28,8 +35,7 @@
 
 mixin inner-block(content,params)
   .inner-block&attributes(attributes)
-    .inner-block__image
-      img(src=info.image.src alt=info.image.alt)
+    img(src=info.image.src alt=info.image.alt).inner-block__image
     .inner-block__info
       h1.inner-block__title!=info.title
       +inner-block__text(info.list)
@@ -41,3 +47,5 @@ mixin inner-block__text(content, params)
       .inner-block__column
         each paragraph in item
           p.inner-block__text-item&attributes(attributes)!=paragraph.text
+            if (paragraph.link) 
+              a(href=paragraph.link.href).inner-block__link!=paragraph.link.content

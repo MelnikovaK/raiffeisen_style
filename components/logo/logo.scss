@@ -1,7 +1,9 @@
 .logo {
 	position: absolute;
-	top: 50px;
-	left: 50px;
-	width: 240px;
-	height: 90px;
+	@extend %LOGO-COMPONENT;
+}
+
+.logo_menu_opened {
+	position: absolute;
+	@extend %LOGO-MENU-OPENED;
 }

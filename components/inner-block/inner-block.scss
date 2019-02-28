@@ -1,31 +1,50 @@
 .inner-block {
   position: absolute;
-  top: $HEADER-HEIGHT;
-  width: $INNER-BLOCK-WIDTH;
+  @extend %INNER-BLOCK-COMPONENT;
 
   &__image {
+    display: block;
     float: left;
-
-  }
-
-  &__info {
-
+    @extend %IMAGE-COMNPONENT;
   }
 
   &__title {
-    margin: 45px 0;
-    text-align: center;
+    @extend %TITLE-COMPONENT;
     @extend %H2;
   }
 
   &__column {
-    margin: 0 40px;
-    width: 330px;
+    position: relative;
     display: inline-block;
+    vertical-align: top;
+
+    @extend %COLUMN-COMPONENT;
   }
 
-  &__text {
-    display: inline-block;
+  &__link {
+    position: relative;
     @extend %TEXT;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      bottom: 7px;
+      left: 53px;
+      width: 20px;
+      height: 6px;
+      background:url('../assets/arrow.png') no-repeat;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__text-item {
+    margin: 18px 0;
+    @extend %TEXT;
+
+    &:nth-child(3):last-child {
+      opacity: 0.6;
+    }
   }
 }

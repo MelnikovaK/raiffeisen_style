@@ -1,5 +1,5 @@
 .menu {
-
+  display: none;
   @mixin active{
     .menu__item_active &{
       @content;
@@ -10,22 +10,25 @@
       @content;
     }
   }
+  box-shadow: -12px 0 10px rgba(0,0,0,0.1);
 
   position: absolute;
   top: 0;
   right: 0;
-  width: $MENU-WIDTH;
+  box-sizing: border-box; 
   height: 100%;
   background: $MENU-COLOR;
+  @extend %MENU-COMPONENT;
 
   &__list{
-    padding: 0 $MENU-ITEM-MARGIN-LEFT;
+    @extend %MENU-LIST-COMPONENT;
     list-style: none;
   }
 
   &__item {
+    width: 100%;
     @extend %MENU-ITEM;
-    margin: $MENU-ITEM-MARGIN 0;
+    @extend %MENU-ITEM-COMPONENT;
   }
 
   &__item_line {
@@ -33,6 +36,7 @@
     width: 64px;
     background: $BASE-COLOR;
     opacity: 0.2;
+    @extend %MENU-LINE-COMPONENT;
   }
     
   &__item-link {

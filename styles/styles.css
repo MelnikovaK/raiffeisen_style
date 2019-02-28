@@ -358,6 +358,7 @@ template {
   font-size: 36px;
   line-height: 1.12;
   font-weight: 100;
+  letter-spacing: 1px;
   color: #4c3440; }
   @media screen and (min-width: 1600px) {
     .inner-block__title {
@@ -393,7 +394,7 @@ template {
   @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .raiffeisen-btns__item {
       font-size: 12px;
-      line-height: 1.12; } }
+      line-height: 2; } }
 
 /**
  * ссылка для загрузки
@@ -405,20 +406,17 @@ template {
   color: #4c3440; }
   @media screen and (max-width: 767px) {
     .download-services__text {
-      font-size: 12px;
-      line-height: 1; } }
+      font-size: 12px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .download-services__text {
-      font-size: 14px;
-      line-height: 1.92; } }
+      font-size: 14px; } }
   @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .download-services__text {
       font-size: 10.5px;
       line-height: 1.95; } }
   @media screen and (min-width: 1600px) {
     .download-services__text {
-      font-size: 14px;
-      line-height: 1.92; } }
+      font-size: 14px; } }
 
 /**
  * текст в футере
@@ -442,26 +440,26 @@ template {
 /**
  * основной текст страницы
  */
-.inner-block__text {
+.inner-block__link, .inner-block__text-item {
   font-size: 14px;
   line-height: 1.44;
   font-weight: 100;
   color: #4c3440; }
   @media screen and (min-width: 1600px) {
-    .inner-block__text {
+    .inner-block__link, .inner-block__text-item {
       font-size: 18px;
       line-height: 1.5; } }
 
 /**
  * селектор языка
  */
-.custom-header__select-label {
+.custom-header__language {
   font-size: 10,5px;
   line-height: 1,92;
   font-weight: 100;
   color: #4c3440; }
   @media screen and (min-width: 1600px) {
-    .custom-header__select-label {
+    .custom-header__language {
       font-size: 14px; } }
 
 /**
@@ -482,18 +480,246 @@ template {
     .menu__item {
       font-size: 15.75px; } }
 
+@media screen and (min-width: 1600px) {
+  .page {
+    border: 22px solid white; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .page {
+    border: 17px solid white; } }
+
+@media screen and (min-width: 1600px) {
+  .custom-header {
+    width: calc(100% - 295px);
+    height: 155px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .custom-header {
+    width: 100%;
+    height: 100px; } }
+
+.custom-header__container {
+  right: 25px; }
+  @media screen and (min-width: 1600px) {
+    .custom-header__container {
+      width: 355px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .custom-header__container {
+      width: 370px; } }
+
+@media screen and (min-width: 1600px) {
+  .custom-header__contacts {
+    top: 55px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .custom-header__contacts {
+    top: 43px; } }
+
+.custom-header__contacts:after {
+  height: 40px; }
+  @media screen and (min-width: 1600px) {
+    .custom-header__contacts:after {
+      margin: 0 30px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .custom-header__contacts:after {
+      margin: 0 20px; } }
+
+@media screen and (min-width: 1600px) {
+  .custom-header__language {
+    right: 21px;
+    top: 58px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .custom-header__language {
+    right: 120px;
+    top: 43px; } }
+
+@media screen and (min-width: 1600px) {
+  .logo {
+    top: 55px;
+    left: 53px;
+    width: 240px;
+    height: 90px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .logo {
+    top: 42px;
+    left: 40px;
+    width: 182px;
+    height: 60px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .logo_menu_opened {
+    top: 42px;
+    left: 40px;
+    width: 240px;
+    height: 90px; } }
+
+@media screen and (min-width: 1600px) {
+  .menu {
+    padding-top: 31px;
+    width: 295px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .menu {
+    padding-top: 20px;
+    width: 220px; } }
+
+@media screen and (min-width: 1600px) {
+  .menu__item {
+    margin: 28px 0; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .menu__item {
+    margin: 22px 0; } }
+
+@media screen and (min-width: 1600px) {
+  .menu__list {
+    padding: 0 55px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .menu__list {
+    padding: 0 43px; } }
+
+@media screen and (min-width: 1600px) {
+  .menu__item_line {
+    margin: 35px 0; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .menu__item_line {
+    margin: 25px 0; } }
+
+@media screen and (min-width: 1600px) {
+  .raiffeisen-btns {
+    height: 35px;
+    margin: 68px 0 60px 55px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .raiffeisen-btns {
+    height: 25px;
+    margin: 57px 0 60px 42px; } }
+
+@media screen and (min-width: 1600px) {
+  .raiffeisen-btns__item_online {
+    width: 117px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .raiffeisen-btns__item_online {
+    width: 90px; } }
+
+@media screen and (min-width: 1600px) {
+  .raiffeisen-btns__item_dealer {
+    width: 65px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .raiffeisen-btns__item_dealer {
+    width: 55px; } }
+
+@media screen and (min-width: 1600px) {
+  .raiffeisen-btns__item {
+    height: 35px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .raiffeisen-btns__item {
+    height: 25px; } }
+
+@media screen and (min-width: 1600px) {
+  .inner-block {
+    top: 155px;
+    width: calc(100% - 295px); } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .inner-block {
+    top: 100px;
+    width: 100%; } }
+
+@media screen and (min-width: 1600px) {
+  .inner-block__image {
+    margin-top: 3px;
+    margin-right: 20px;
+    width: 392px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .inner-block__image {
+    margin-right: 50px;
+    width: 353px; } }
+
+@media screen and (min-width: 1600px) {
+  .inner-block__title {
+    margin: 40px 0 32px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .inner-block__title {
+    margin: 50px 0 15px; } }
+
+@media screen and (min-width: 1600px) {
+  .inner-block__column {
+    margin-right: 33px;
+    width: 325px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .inner-block__column {
+    margin-right: 38px;
+    width: 230px; } }
+
+@media screen and (min-width: 1600px) {
+  .footer {
+    height: 110px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .footer {
+    height: 69px; } }
+
+@media screen and (min-width: 1600px) {
+  .footer__text {
+    margin: 18px 55px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .footer__text {
+    margin: 12px 42px; } }
+
+@media screen and (min-width: 1600px) {
+  .download-services {
+    margin: 0 53px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .download-services {
+    margin: 0 41px; } }
+
+@media screen and (min-width: 1600px) {
+  .download-services__icon {
+    width: 45px;
+    height: 35px;
+    margin-top: 6px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .download-services__icon {
+    width: 30px;
+    height: 25px; } }
+
+@media screen and (min-width: 1600px) {
+  .download-services__text {
+    margin: 11px 10px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .download-services__text {
+    margin: 4px 10px; } }
+
 .menu {
+  display: none;
+  -webkit-box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   right: 0;
-  width: 290px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   background: #f2f1f1; }
   .menu__list {
-    padding: 0 50px;
     list-style: none; }
   .menu__item {
-    margin: 30px 0; }
+    width: 100%; }
   .menu__item_line {
     height: 1px;
     width: 64px;
@@ -526,82 +752,114 @@ template {
         opacity: 1; }
 
 .logo {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 240px;
-  height: 90px; }
+  position: absolute; }
+
+.logo_menu_opened {
+  position: absolute; }
 
 .inner-block {
-  position: absolute;
-  top: 155px;
-  width: 1310px; }
+  position: absolute; }
   .inner-block__image {
+    display: block;
     float: left; }
-  .inner-block__title {
-    margin: 45px 0;
-    text-align: center; }
   .inner-block__column {
-    margin: 0 40px;
-    width: 330px;
-    display: inline-block; }
-  .inner-block__text {
-    display: inline-block; }
+    position: relative;
+    display: inline-block;
+    vertical-align: top; }
+  .inner-block__link {
+    position: relative; }
+    .inner-block__link:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      bottom: 7px;
+      left: 53px;
+      width: 20px;
+      height: 6px;
+      background: url("../assets/arrow.png") no-repeat;
+      opacity: 1;
+      cursor: pointer; }
+  .inner-block__text-item {
+    margin: 18px 0; }
+    .inner-block__text-item:nth-child(3):last-child {
+      opacity: 0.6; }
+
+.language__list {
+  list-style: none;
+  display: none; }
 
 .custom-header {
   position: absolute;
   display: block;
-  top: 0;
-  width: 1310px;
-  height: 155px; }
+  top: 0; }
+  .custom-header .custom-header__language:after, .custom-header .custom-header__language_opened:after {
+    position: absolute;
+    left: 22px;
+    width: 15px;
+    height: 10px;
+    content: "";
+    background: url("../assets/selector.png") no-repeat; }
   .custom-header__container {
     position: absolute;
-    right: 0;
-    width: 400px;
     height: inherit; }
   .custom-header__contacts {
-    position: absolute;
-    top: 50px; }
+    position: absolute; }
     .custom-header__contacts:after {
-      height: 40px;
-      margin-left: 25px;
       border-left: 2px solid #4c3440;
       content: "";
       opacity: 0.2; }
-  .custom-header__select-label {
+  .custom-header__language {
     position: absolute;
     display: inline-block;
-    right: 20px;
-    top: 52px; }
+    cursor: pointer;
+    opacity: 0.7; }
+    .custom-header__language:after {
+      bottom: 4px; }
+    .custom-header__language_opened:after {
+      bottom: 8px;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .custom-header__menu {
+    position: absolute;
+    font-size: 12px;
+    right: 15px;
+    top: 45px;
+    opacity: 0.7; }
+    .custom-header__menu:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -30px;
+      content: "";
+      background: url("../assets/menu.png") no-repeat; }
 
 .page {
   position: relative;
   background-color: #f9f9f8;
   height: 100%;
   width: 100%;
-  border: 22px solid white;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 130px;
   background-color: #f8f7f7;
-  padding-top: 30px; }
+  padding-top: 25px; }
   .footer__text {
-    margin: 30px 40px;
-    font-size: 12px;
     color: black;
+    width: 100%;
     opacity: 0.5; }
 
 .raiffeisen-btns {
-  display: block;
-  margin: 65px 45px 45px; }
+  display: block; }
   .raiffeisen-btns__item {
     display: inline-block;
-    height: 35px;
-    line-height: 35px;
     text-align: center;
     text-decoration: none;
     border: 1px solid #b3aaaf;
@@ -613,56 +871,61 @@ template {
       color: #ffffff;
       border-color: #6d5b66; }
     .raiffeisen-btns__item_online {
-      width: 120px;
       color: #ffffff;
       background-color: #b3aaaf; }
     .raiffeisen-btns__item_dealer {
-      width: 70px;
       color: #4c3440; }
 
 .inner-block {
-  position: absolute;
-  top: 155px;
-  width: 1310px; }
+  position: absolute; }
   .inner-block__image {
+    display: block;
     float: left; }
-  .inner-block__title {
-    margin: 45px 0;
-    text-align: center; }
   .inner-block__column {
-    margin: 0 40px;
-    width: 330px;
-    display: inline-block; }
-  .inner-block__text {
-    display: inline-block; }
-
-.download-services {
-  margin: 0 40px; }
-  .download-services__icon {
-    width: 50px;
-    height: 40px;
-    display: inline-block; }
-  .download-services__text {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    margin: 14px 10px;
-    font-size: 14px;
-    color: #4c3440;
-    text-decoration: none;
+    vertical-align: top; }
+  .inner-block__link {
+    position: relative; }
+    .inner-block__link:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      bottom: 7px;
+      left: 53px;
+      width: 20px;
+      height: 6px;
+      background: url("../assets/arrow.png") no-repeat;
+      opacity: 1;
+      cursor: pointer; }
+  .inner-block__text-item {
+    margin: 18px 0; }
+    .inner-block__text-item:nth-child(3):last-child {
+      opacity: 0.6; }
+
+.download-services__icon {
+  display: inline-block; }
+
+.download-services__text {
+  position: absolute;
+  display: inline-block;
+  color: #4c3440;
+  text-decoration: none;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s; }
+  .download-services:hover .download-services__text {
+    opacity: 0.5; }
+  .download-services__text:after {
+    content: "";
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 1px;
+    margin-top: -5px;
+    background: url("dots.png");
     -webkit-transition: opacity .3s;
     -o-transition: opacity .3s;
     transition: opacity .3s; }
-    .download-services:hover .download-services__text {
-      opacity: 0.5; }
-    .download-services__text:after {
-      content: "";
-      position: absolute;
-      opacity: 1;
-      width: 100%;
-      height: 1px;
-      background: url("dots.png");
-      -webkit-transition: opacity .3s;
-      -o-transition: opacity .3s;
-      transition: opacity .3s; }
-      .download-services:hover .download-services__text:after {
-        opacity: 0; }
+    .download-services:hover .download-services__text:after {
+      opacity: 0; }
