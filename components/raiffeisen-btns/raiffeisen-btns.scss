@@ -1,16 +1,17 @@
 .raiffeisen-btns {
 
   display: block;
-  margin: $BUTTONS-MARGIN-TOP $BUTTONS-MARGIN-LEFT $BUTTONS-MARGIN-BOTTOM;  
+
+  @extend %BUTTONS-COMPONENT;
 
   &__item {
     display: inline-block;
-    height: 35px;
-    line-height: 35px;
+    // line-height: 35px;
     text-align: center;
     text-decoration: none;
     border: 1px solid $NORMAL_BUTTON_COLOR;
     transition: background .3s, color .3s, border .3s;
+    @extend %BUTTON-COMPONENT;
 
     @extend %RAIFFEISEN-BTN;
     
@@ -21,15 +22,15 @@
     }
 
     &_online {
-      width: 120px;
       color: #ffffff;
       background-color: $NORMAL_BUTTON_COLOR;
+      @extend %ONLINE-BUTTON-COMPONENT;
     }
     
 
     &_dealer {
-      width: 70px;
       color: $BASE-COLOR;
+      @extend %DEALER-BUTTON-COMPONENT;
     }
   }
 }

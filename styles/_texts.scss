@@ -19,6 +19,7 @@
   font-size: 36px;
   line-height: 1.12;
   font-weight: 100;
+  letter-spacing: 1px;
   color: $BASE-COLOR;
   @include DESKTOP {
     font-size: 48px;
@@ -55,7 +56,7 @@
   }
   @include TABLET-L {
     font-size: 12px;
-    line-height: 1.12;
+    line-height: 2;
   }
 }
 
@@ -69,11 +70,9 @@
   color: $BASE-COLOR;
   @include MOBILE {
     font-size: 12px;
-    line-height: 1;
   }
   @include TABLET {
     font-size: 14px;
-    line-height: 1.92;
   }
   @include TABLET-L {
     font-size: 10.5px;
@@ -81,7 +80,6 @@
   }
   @include DESKTOP {
     font-size: 14px;
-    line-height: 1.92;
   }
 }
 

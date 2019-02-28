@@ -1,0 +1,262 @@
+//PAGE
+%PAGE-COMPONENT {
+  @include DESKTOP {
+    border: $PAGE-BORDER solid white;
+  }
+  @include TABLET-L {
+    border: $PAGE-BORDER-LAPTOP solid white;
+  }
+}
+
+//HEADER 
+%CUSTOM-HEADER-COMPONENT {
+  @include DESKTOP {
+    width: $HEADER-WIDTH;
+    height: $HEADER-HEIGHT;
+  }
+  @include TABLET-L {
+    width: $HEADER-WIDTH-LAPTOP;
+    height: $HEADER-HEIGHT-LAPTOP;
+  }
+}
+
+%HEADER-CONTAINER-COMPONENT {
+  right: 25px;
+  @include DESKTOP {
+    width: 355px;
+  }
+  @include TABLET-L {
+    width: 370px;
+  }
+}
+
+%CONTACTS-COMPONENT {
+  @include DESKTOP {
+    top: 55px;
+  }
+  @include TABLET-L {
+    top: 43px;
+  }
+}
+
+%HEADER-LINE-COMPONENT {
+  height: 40px; 
+  @include DESKTOP {
+    margin: 0 30px;
+  }
+  @include TABLET-L {
+    margin: 0 20px;
+  }
+}
+
+%LANGUAGE-COMPONENT {
+  @include DESKTOP {
+    right: 21px;
+    top: 58px;
+
+  }
+  @include TABLET-L {
+    right: 120px;
+    top: 43px;
+
+  }
+}
+
+//LOGO
+%LOGO-COMPONENT {
+  @include DESKTOP {
+    top: 55px;
+    left: 53px;
+    width: 240px;
+    height: 90px;
+  }
+  @include TABLET-L {
+    top: 42px;
+    left: 40px;
+    width: 182px;
+    height: 60px;
+  }
+}
+
+%LOGO-MENU-OPENED {
+  @include TABLET-L {
+    top: 42px;
+    left: 40px;
+    width: 240px;
+    height: 90px;
+  }
+}
+
+//MENU
+%MENU-COMPONENT {
+  @include DESKTOP {
+    padding-top: $MENU-PADDING;
+    width: $MENU-WIDTH;
+  }
+  @include TABLET-L {
+    padding-top: $MENU-PADDING-LAPTOP;
+    width: $MENU-WIDTH-LAPTOP;
+  }
+}
+
+%MENU-ITEM-COMPONENT {
+  @include DESKTOP {
+    margin: $MENU-ITEM-MARGIN 0;
+  }
+  @include TABLET-L {
+    margin: $MENU-ITEM-MARGIN-LAPTOP 0;
+  }
+}
+
+%MENU-LIST-COMPONENT {
+  @include DESKTOP {
+    padding: 0 $MENU-ITEM-MARGIN-LEFT;
+  }
+  @include TABLET-L {
+    padding: 0 $MENU-ITEM-MARGIN-LEFT-LAPTOP;
+  }
+}
+
+%MENU-LINE-COMPONENT {
+  @include DESKTOP {
+    margin: $MENU-LINE-MARGIN 0;
+  }
+  @include TABLET-L {
+    margin: $MENU-LINE-MARGIN-LAPTOP 0;
+  }
+}
+
+//BUTTONS
+
+%BUTTONS-COMPONENT {
+  @include DESKTOP {
+    height: $BUTTONS-HEIGHT;
+    margin: $BUTTONS-MARGIN-TOP 0 $BUTTONS-MARGIN-BOTTOM $BUTTONS-MARGIN-LEFT;  
+  }
+  @include TABLET-L {
+    height: $BUTTONS-HEIGHT-LAPTOP;
+    margin: $BUTTONS-MARGIN-TOP-LAPTOP 0 $BUTTONS-MARGIN-BOTTOM-LAPTOP $BUTTONS-MARGIN-LEFT-LAPTOP;  
+  }
+}
+
+%ONLINE-BUTTON-COMPONENT {
+  @include DESKTOP {
+    width: $ONLINE-BUTTON-WIDTH;
+  }
+  @include TABLET-L {
+    width: $ONLINE-BUTTON-WIDTH-LAPTOP;
+  }
+}
+
+%DEALER-BUTTON-COMPONENT {
+  @include DESKTOP {
+    width: $DEALER-BUTTON-WIDTH;
+  }
+  @include TABLET-L {
+    width: $DEALER-BUTTON-WIDTH-LAPTOP;
+  }
+}
+
+%BUTTON-COMPONENT {
+  @include DESKTOP {
+    height: $BUTTONS-HEIGHT;
+  }
+  @include TABLET-L {
+    height: $BUTTONS-HEIGHT-LAPTOP;  
+  }
+}
+
+//INNER-BLOCK 
+%INNER-BLOCK-COMPONENT {
+  @include DESKTOP {
+    top: $HEADER-HEIGHT;
+    width: $INNER-BLOCK-WIDTH;
+  }
+  @include TABLET-L {
+    top: $HEADER-HEIGHT-LAPTOP;
+    width: 100%;
+  }
+}
+
+%IMAGE-COMNPONENT {
+  @include DESKTOP {
+    margin-top: 3px;
+    margin-right: 20px;
+    width: $IMAGE-WIDTH;
+  }
+  @include TABLET-L {
+    margin-right: 50px;
+    width: $IMAGE-WIDTH-LAPTOP;
+  }
+}
+
+%TITLE-COMPONENT {
+  @include DESKTOP {
+    margin: $TITLE-MARGIN-TOP 0 $TITLE-MARGIN-BOTTOM;
+  }
+  @include TABLET-L {
+    margin: $TITLE-MARGIN-TOP-LAPTOP 0 $TITLE-MARGIN-BOTTOM-LAPTOP;
+  }
+}
+
+%COLUMN-COMPONENT {
+  @include DESKTOP {
+    margin-right: $COLUMN-MARGIN;
+    width: $COLUMN-TEXT-WIDTH;
+  }
+  @include TABLET-L {
+    margin-right: $COLUMN-MARGIN-LAPTOP;
+    width: $COLUMN-TEXT-WIDTH-LAPTOP;
+  }
+}
+
+//FOOTER
+
+%FOOTER-COMPONENT {
+  @include DESKTOP {
+    height: $FOOTER-HEIGHT;
+  }
+  @include TABLET-L {
+    height: $FOOTER-HEIGHT-LAPTOP;
+  }
+}
+
+%FOOTER-TEXT-COMPONENT {
+  @include DESKTOP {
+    margin: $FOOTER-MARGIN $FOOTER-MARGIN-LEFT;
+  }
+  @include TABLET-L {
+    margin: $FOOTER-MARGIN-LAPTOP $FOOTER-MARGIN-LEFT-LAPTOP;
+  }
+}
+
+//DOWNLOAD-SERVICES
+%DOWNLOAD-SERVICES-COMPONENT {
+  @include DESKTOP {
+    margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT;  
+  }
+  @include TABLET-L {
+    margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-LAPTOP;  
+  }
+}
+
+%DOWNLOAD-ICON-COMPONENT {
+  @include DESKTOP {
+    width: 45px;
+    height: 35px;
+    margin-top: 6px;
+  }
+  @include TABLET-L {
+    width: 30px;
+    height: 25px;
+  }
+}
+
+%DOWNLOAD-TEXT-COMPONENT {
+  @include DESKTOP {
+    margin: 11px 10px;
+  }
+  @include TABLET-L {
+    margin: 4px 10px;
+  }
+}
