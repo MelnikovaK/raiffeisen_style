@@ -52,11 +52,14 @@
   }
   @include TABLET {
     font-size: 16px;
-    line-height: 1.16;
+    line-height: 2.3;
   }
   @include TABLET-L {
     font-size: 12px;
     line-height: 2;
+  }
+  @include MOBILE {
+    line-height: 2.5;
   }
 }
 
@@ -70,6 +73,7 @@
   color: $BASE-COLOR;
   @include MOBILE {
     font-size: 12px;
+    line-height: 1.2;
   }
   @include TABLET {
     font-size: 14px;
@@ -113,6 +117,9 @@
   color: $BASE-COLOR;
   @include DESKTOP {
     font-size: 18px;
+    line-height: 1.5;
+  }
+  @include TABLET {
     line-height: 1.5;
   }
 }

@@ -10,7 +10,6 @@
       @content;
     }
   }
-  box-shadow: -12px 0 10px rgba(0,0,0,0.1);
 
   position: absolute;
   top: 0;
@@ -18,6 +17,7 @@
   box-sizing: border-box; 
   height: 100%;
   background: $MENU-COLOR;
+  z-index: 11;
   @extend %MENU-COMPONENT;
 
   &__list{
@@ -29,6 +29,18 @@
     width: 100%;
     @extend %MENU-ITEM;
     @extend %MENU-ITEM-COMPONENT;
+    &:first-child:after {
+      @extend %MENU-CLOSE-COMPONENT;
+      position: absolute;
+      content: "";
+      cursor: pointer;
+      background:url('../assets/close.png') no-repeat;
+    } 
+    &:nth-child(n+6) {
+      @include MOBILE {
+        margin: 24px 0;
+      }
+    } 
   }
 
   &__item_line {

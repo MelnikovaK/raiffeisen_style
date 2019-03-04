@@ -6,85 +6,137 @@
   @include TABLET-L {
     border: $PAGE-BORDER-LAPTOP solid white;
   }
+  @include TABLET {
+    border: $PAGE-BORDER-TABLET solid white;
+  }
+  @include MOBILE {
+    border: $PAGE-BORDER-MOBILE solid white;
+  }
 }
 
 //HEADER 
 %CUSTOM-HEADER-COMPONENT {
+  width: 100%;
+  position: absolute;
   @include DESKTOP {
     width: $HEADER-WIDTH;
     height: $HEADER-HEIGHT;
   }
   @include TABLET-L {
-    width: $HEADER-WIDTH-LAPTOP;
     height: $HEADER-HEIGHT-LAPTOP;
+  }
+  @include TABLET {
+    height: $HEADER-HEIGHT-LAPTOP;
+  }
+  @include MOBILE {
+    position: static;
+    height: 0;
   }
 }
 
 %HEADER-CONTAINER-COMPONENT {
   right: 25px;
   @include DESKTOP {
-    width: 355px;
+    width: $HEADER-CONTAINER-WIDTH-DESKTOP;
   }
   @include TABLET-L {
-    width: 370px;
+    width: $HEADER-CONTAINER-WIDTH-LAPTOP;
+  }
+  @include TABLET {
+    width: $HEADER-CONTAINER-WIDTH-TABLET;
+    right: 0;
+  }
+  @include MOBILE {
+    position: fixed!important;
+    height: 60px!important;
+    width: $HEADER-CONTAINER-WIDTH-MOBILE;
+    left:0;
+    bottom: 0px;
+    z-index: 5;
+    background: $FOOTER_COLOR;
   }
 }
 
 %CONTACTS-COMPONENT {
-  @include DESKTOP {
-    top: 55px;
-  }
+  top: 55px;
   @include TABLET-L {
-    top: 43px;
+    top: $CONTACTS-TOP-LAPTOP;
+  }
+  @include TABLET {
+    top: 40px;
+  }
+  @include MOBILE {
+    position: fixed;
+    top: $CONTACTS-TOP-MOBILE; 
+    left: 25px;
+    margin: -35px 0;
+    z-index: 10;
   }
 }
 
 %HEADER-LINE-COMPONENT {
   height: 40px; 
+  margin: 0 20px;
   @include DESKTOP {
     margin: 0 30px;
-  }
-  @include TABLET-L {
-    margin: 0 20px;
   }
 }
 
 %LANGUAGE-COMPONENT {
   @include DESKTOP {
-    right: 21px;
-    top: 58px;
+    right: $LANGUAGE-RIGHT-DESKTOP;
+    top: $LANGUAGE-TOP-DESKTOP;
 
   }
   @include TABLET-L {
-    right: 120px;
-    top: 43px;
+    right: $LANGUAGE-RIGHT-LAPTOP;
+    top: $LANGUAGE-TOP-LAPTOP;
+  }
+
+  @include TABLET {
+    right: $LANGUAGE-RIGHT-TABLET;
+    top: $LANGUAGE-TOP-TABLET;
+  }
+  @include MOBILE {
+    right: $LANGUAGE-RIGHT-MOBILE;
+    top: $LANGUAGE-TOP-MOBILE;
+    margin: -35px 0;
 
   }
 }
 
 //LOGO
 %LOGO-COMPONENT {
+  z-index: 5;
+  top: 55px;  
+  width: $LOGO-WIDTH-DEFAULT;
   @include DESKTOP {
-    top: 55px;
     left: 53px;
-    width: 240px;
-    height: 90px;
+    height: $LOGO-HEIGHT-DESKTOP;
   }
   @include TABLET-L {
     top: 42px;
     left: 40px;
+  }
+  @include TABLET {
+    top: 40px;
+    left: 35px;
     width: 182px;
-    height: 60px;
+    height: $LOGO-HEIGHT-LAPTOP;
+  }
+  @include MOBILE {
+    top: 25px;
+    left: 25px;
+    width: 182px;
+    height: $LOGO-HEIGHT-MOBILE;
   }
 }
 
 %LOGO-MENU-OPENED {
-  @include TABLET-L {
-    top: 42px;
-    left: 40px;
-    width: 240px;
-    height: 90px;
-  }
+  top: 42px;
+  left: 40px;
+  width: 240px;
+  height: 90px;
 }
 
 //MENU
@@ -96,6 +148,17 @@
   @include TABLET-L {
     padding-top: $MENU-PADDING-LAPTOP;
     width: $MENU-WIDTH-LAPTOP;
+    box-shadow: -12px 0 10px rgba(0,0,0,0.1);
+  }
+  @include TABLET {
+    padding-top: $MENU-PADDING-TABLET;
+    width: $MENU-WIDTH-TABLET;
+    box-shadow: -12px 0 10px rgba(0,0,0,0.1);
+  }
+  @include MOBILE {
+    padding-top: $MENU-PADDING-MOBILE;
+    width: $MENU-WIDTH-MOBILE;
+    box-shadow: -12px 0 10px rgba(0,0,0,0.1);
   }
 }
 
@@ -106,6 +169,12 @@
   @include TABLET-L {
     margin: $MENU-ITEM-MARGIN-LAPTOP 0;
   }
+  @include TABLET {
+    margin: $MENU-ITEM-MARGIN-TABLET 0;
+  }
+  @include MOBILE {
+    margin: $MENU-ITEM-MARGIN-MOBILE 0;
+  }
 }
 
 %MENU-LIST-COMPONENT {
@@ -115,6 +184,12 @@
   @include TABLET-L {
     padding: 0 $MENU-ITEM-MARGIN-LEFT-LAPTOP;
   }
+  @include TABLET {
+    padding: 0 $MENU-ITEM-MARGIN-LEFT;
+  }
+  @include MOBILE {
+    padding: 0 $MENU-ITEM-MARGIN-LEFT-MOBILE;
+  }
 }
 
 %MENU-LINE-COMPONENT {
@@ -123,6 +198,34 @@
   }
   @include TABLET-L {
     margin: $MENU-LINE-MARGIN-LAPTOP 0;
+  }
+  @include TABLET {
+    margin: $MENU-LINE-MARGIN-TABLET 0;
+  }
+  @include MOBILE {
+    margin: $MENU-LINE-MARGIN-MOBILE 0 $MENU-LINE-MARGIN-BOTTOM-MOBILE;
+  }
+}
+
+%MENU-CLOSE-COMPONENT {
+  @include TABLET-L {
+    right: 35px;
+    top: 46px;
+    width: 15px;
+    height: 10px;
+  }
+  @include TABLET {
+    right: 35px;
+    top: 46px;
+    width: 15px;
+    height: 10px;
+  }
+  @include MOBILE {
+    right: 35px;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    background-size: 150% 150%;
   }
 }
 
@@ -137,6 +240,14 @@
     height: $BUTTONS-HEIGHT-LAPTOP;
     margin: $BUTTONS-MARGIN-TOP-LAPTOP 0 $BUTTONS-MARGIN-BOTTOM-LAPTOP $BUTTONS-MARGIN-LEFT-LAPTOP;  
   }
+  @include TABLET {
+    height: $BUTTONS-HEIGHT-TABLET;
+    margin: $BUTTONS-MARGIN-TOP-TABLET 0 $BUTTONS-MARGIN-BOTTOM-TABLET $BUTTONS-MARGIN-LEFT-TABLET;  
+  }
+  @include MOBILE {
+    height: $BUTTONS-HEIGHT-MOBILE;
+    margin: $BUTTONS-MARGIN-TOP-MOBILE 0 $BUTTONS-MARGIN-BOTTOM-MOBILE $BUTTONS-MARGIN-LEFT-MOBILE;  
+  }
 }
 
 %ONLINE-BUTTON-COMPONENT {
@@ -145,6 +256,12 @@
   }
   @include TABLET-L {
     width: $ONLINE-BUTTON-WIDTH-LAPTOP;
+  }
+  @include TABLET {
+    width: $ONLINE-BUTTON-WIDTH-TABLET;
+  }
+  @include MOBILE {
+    width: $ONLINE-BUTTON-WIDTH-MOBILE;
   }
 }
 
@@ -155,6 +272,12 @@
   @include TABLET-L {
     width: $DEALER-BUTTON-WIDTH-LAPTOP;
   }
+  @include TABLET {
+    width: $DEALER-BUTTON-WIDTH-TABLET;
+  }
+  @include MOBILE {
+    width: $DEALER-BUTTON-WIDTH-MOBILE;
+  }
 }
 
 %BUTTON-COMPONENT {
@@ -163,6 +286,12 @@
   }
   @include TABLET-L {
     height: $BUTTONS-HEIGHT-LAPTOP;  
+  }
+  @include TABLET {
+    height: $BUTTONS-HEIGHT-TABLET;  
+  }
+  @include MOBILE {
+    height: $BUTTONS-HEIGHT-MOBILE;  
   }
 }
 
@@ -176,17 +305,39 @@
     top: $HEADER-HEIGHT-LAPTOP;
     width: 100%;
   }
+  @include TABLET {
+    top: $HEADER-HEIGHT-LAPTOP;
+    width: 100%;
+  }
+  @include MOBILE {
+    top: $HEADER-HEIGHT-LAPTOP;
+    width: 100%;
+  }
 }
 
 %IMAGE-COMNPONENT {
+  float: left;  
   @include DESKTOP {
-    margin-top: 3px;
-    margin-right: 20px;
+    margin: 3px 0 0 20px;
     width: $IMAGE-WIDTH;
   }
   @include TABLET-L {
     margin-right: 50px;
     width: $IMAGE-WIDTH-LAPTOP;
+  }
+  @include TABLET {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -15% );
+    width: 270px;
+    // height: 450px;
+  }
+  @include MOBILE {
+    float: none;
+    display: block;
+    margin: -120px 0 -60px; 
+    height: 340px;
   }
 }
 
@@ -196,6 +347,12 @@
   }
   @include TABLET-L {
     margin: $TITLE-MARGIN-TOP-LAPTOP 0 $TITLE-MARGIN-BOTTOM-LAPTOP;
+  }
+  @include TABLET {
+    margin: $TITLE-MARGIN-TOP-LAPTOP 0 $TITLE-MARGIN-BOTTOM-LAPTOP;
+  }
+  @include MOBILE {
+    margin: $TITLE-MARGIN-TOP-MOBILE $TITLE-MARGIN-LEFT-MOBILE 0;
   }
 }
 
@@ -208,6 +365,14 @@
     margin-right: $COLUMN-MARGIN-LAPTOP;
     width: $COLUMN-TEXT-WIDTH-LAPTOP;
   }
+  @include TABLET {
+    margin-right: $COLUMN-MARGIN-TABLET;
+    width: $COLUMN-TEXT-WIDTH-TABLET;
+  }
+  @include MOBILE {
+    width: $COLUMN-TEXT-WIDTH-MOBILE;
+    margin: 0 $TITLE-MARGIN-LEFT-MOBILE;
+  }
 }
 
 //FOOTER
@@ -219,14 +384,31 @@
   @include TABLET-L {
     height: $FOOTER-HEIGHT-LAPTOP;
   }
+  @include TABLET {
+    height: $FOOTER-HEIGHT-TABLET;
+  }
+  @include MOBILE {
+    height: $FOOTER-HEIGHT-MOBILE;
+  }
 }
 
 %FOOTER-TEXT-COMPONENT {
+  width: auto;
   @include DESKTOP {
     margin: $FOOTER-MARGIN $FOOTER-MARGIN-LEFT;
   }
   @include TABLET-L {
     margin: $FOOTER-MARGIN-LAPTOP $FOOTER-MARGIN-LEFT-LAPTOP;
+  }
+  @include TABLET {
+    margin: $FOOTER-MARGIN-TABLET $FOOTER-MARGIN-LEFT-TABLET;
+  }
+  @include MOBILE {
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    display: inline;
+    width: 98px;
   }
 }
 
@@ -237,6 +419,15 @@
   }
   @include TABLET-L {
     margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-LAPTOP;  
+  }
+  @include TABLET {
+    margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-TABLET;  
+  }
+  @include MOBILE {
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    display: inline;
   }
 }
 
@@ -250,6 +441,14 @@
     width: 30px;
     height: 25px;
   }
+  @include TABLET {
+    width: 30px;
+    height: 25px;
+  }
+  @include MOBILE {
+    width: 30px;
+    height: 25px;
+  }
 }
 
 %DOWNLOAD-TEXT-COMPONENT {
@@ -258,5 +457,12 @@
   }
   @include TABLET-L {
     margin: 4px 10px;
+  }
+  @include TABLET {
+    margin: 4px 10px;
+  }
+  @include MOBILE {
+    margin: -5px 16px;
+    width: 70px;
   }
 }

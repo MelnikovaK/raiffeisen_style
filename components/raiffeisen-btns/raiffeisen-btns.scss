@@ -23,6 +23,7 @@
 
     &_online {
       color: #ffffff;
+      vertical-align: center;
       background-color: $NORMAL_BUTTON_COLOR;
       @extend %ONLINE-BUTTON-COMPONENT;
     }
@@ -30,6 +31,7 @@
 
     &_dealer {
       color: $BASE-COLOR;
+      vertical-align: center;
       @extend %DEALER-BUTTON-COMPONENT;
     }
   }

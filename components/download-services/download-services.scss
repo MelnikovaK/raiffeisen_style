@@ -30,6 +30,9 @@
       width: 100%;
       height: 1px;
       margin-top: -5px;
+      @include MOBILE {
+        margin: 15px -65px;
+      }
       background:url('dots.png');
       transition: opacity .3s;
 

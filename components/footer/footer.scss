@@ -5,10 +5,13 @@
   background-color: $FOOTER_COLOR;
   padding-top: $FOOTER-PADDING;
   @extend %FOOTER-COMPONENT;
+  @include MOBILE {
+    background-color: $MENU_COLOR;
+  }
 
   &__text {
     color: black;
-    width: 100%;
+    
     opacity: 0.5;
     @extend %FOOTER-TEXT;
     @extend %FOOTER-TEXT-COMPONENT;

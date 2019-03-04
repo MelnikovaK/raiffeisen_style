@@ -1,8 +1,8 @@
 @mixin MOBILE() {
-  @media screen and (max-width: $TABLET - 1) { @content; }
+  @media screen and (min-width: $MOBILE) and (max-width: $TABLET - 1) { @content; }
 }
 @mixin NOT-MOBILE() {
-  @media screen and (min-width: $TABLET ) { @content; }
+  @media screen and (max-width: $MOBILE - 1 ) and (min-width: 0) { @content; }
 }
 
 @mixin TABLET() {

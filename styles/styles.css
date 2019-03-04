@@ -384,17 +384,20 @@ template {
   line-height: 1.28;
   font-weight: 100;
   color: #4c3440; }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     .raiffeisen-btns__item {
       font-size: 15.75px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .raiffeisen-btns__item {
       font-size: 16px;
-      line-height: 1.16; } }
+      line-height: 2.3; } }
   @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .raiffeisen-btns__item {
       font-size: 12px;
       line-height: 2; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .raiffeisen-btns__item {
+      line-height: 2.5; } }
 
 /**
  * ссылка для загрузки
@@ -404,9 +407,10 @@ template {
   line-height: 1.92;
   font-weight: 100;
   color: #4c3440; }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     .download-services__text {
-      font-size: 12px; } }
+      font-size: 12px;
+      line-height: 1.2; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .download-services__text {
       font-size: 14px; } }
@@ -426,7 +430,7 @@ template {
   line-height: 2.25;
   font-weight: 100;
   color: #000000; }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     .footer__text {
       font-size: 10px;
       line-height: 1.2; } }
@@ -449,6 +453,9 @@ template {
     .inner-block__link, .inner-block__text-item {
       font-size: 18px;
       line-height: 1.5; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__link, .inner-block__text-item {
+      line-height: 1.5; } }
 
 /**
  * селектор языка
@@ -469,7 +476,7 @@ template {
   font-size: 21px;
   line-height: 1.14;
   color: #4c3440; }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     .menu__item {
       font-size: 18px;
       line-height: 1; } }
@@ -480,23 +487,23 @@ template {
     .menu__item {
       font-size: 15.75px; } }
 
-@media screen and (min-width: 1600px) {
-  .page {
-    border: 22px solid white; } }
-
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .page {
-    border: 17px solid white; } }
-
-@media screen and (min-width: 1600px) {
-  .custom-header {
-    width: calc(100% - 295px);
-    height: 155px; } }
-
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .custom-header {
-    width: 100%;
-    height: 100px; } }
+.custom-header {
+  width: 100%;
+  position: absolute; }
+  @media screen and (min-width: 1600px) {
+    .custom-header {
+      width: calc(100% - 295px);
+      height: 155px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .custom-header {
+      height: 100px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .custom-header {
+      height: 100px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .custom-header {
+      position: static;
+      height: 0; } }
 
 .custom-header__container {
   right: 25px; }
@@ -506,23 +513,42 @@ template {
   @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .custom-header__container {
       width: 370px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .custom-header__container {
+      width: 390px;
+      right: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .custom-header__container {
+      position: fixed !important;
+      height: 60px !important;
+      width: 100%;
+      left: 0;
+      bottom: 0px;
+      z-index: 5;
+      background: #f8f7f7; } }
 
-@media screen and (min-width: 1600px) {
-  .custom-header__contacts {
-    top: 55px; } }
-
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .custom-header__contacts {
-    top: 43px; } }
+.custom-header__contacts {
+  top: 55px; }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .custom-header__contacts {
+      top: 43px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .custom-header__contacts {
+      top: 40px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .custom-header__contacts {
+      position: fixed;
+      top: 55px;
+      left: 25px;
+      margin: -35px 0;
+      z-index: 10; } }
 
 .custom-header__contacts:after {
-  height: 40px; }
+  height: 40px;
+  margin: 0 20px; }
   @media screen and (min-width: 1600px) {
     .custom-header__contacts:after {
       margin: 0 30px; } }
-  @media screen and (min-width: 1024px) and (max-width: 1599px) {
-    .custom-header__contacts:after {
-      margin: 0 20px; } }
 
 @media screen and (min-width: 1600px) {
   .custom-header__language {
@@ -534,26 +560,47 @@ template {
     right: 120px;
     top: 43px; } }
 
-@media screen and (min-width: 1600px) {
-  .logo {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .custom-header__language {
+    right: 145px;
+    top: 40px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .custom-header__language {
+    right: 28px;
     top: 55px;
-    left: 53px;
-    width: 240px;
-    height: 90px; } }
+    margin: -35px 0; } }
 
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .logo {
-    top: 42px;
-    left: 40px;
-    width: 182px;
-    height: 60px; } }
+.logo {
+  z-index: 5;
+  top: 55px;
+  width: 240px; }
+  @media screen and (min-width: 1600px) {
+    .logo {
+      left: 53px;
+      height: 90px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .logo {
+      top: 42px;
+      left: 40px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .logo {
+      top: 40px;
+      left: 35px;
+      width: 182px;
+      height: 60px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .logo {
+      top: 25px;
+      left: 25px;
+      width: 182px;
+      height: 60px; } }
 
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .logo_menu_opened {
-    top: 42px;
-    left: 40px;
-    width: 240px;
-    height: 90px; } }
+.logo_menu_opened {
+  top: 42px;
+  left: 40px;
+  width: 240px;
+  height: 90px; }
 
 @media screen and (min-width: 1600px) {
   .menu {
@@ -563,7 +610,23 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .menu {
     padding-top: 20px;
-    width: 220px; } }
+    width: 220px;
+    -webkit-box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1); } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu {
+    padding-top: 85px;
+    width: 324px;
+    -webkit-box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1); } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu {
+    padding-top: 5px;
+    width: 100%;
+    -webkit-box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1); } }
 
 @media screen and (min-width: 1600px) {
   .menu__item {
@@ -573,6 +636,14 @@ template {
   .menu__item {
     margin: 22px 0; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu__item {
+    margin: 30px 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu__item {
+    margin: 33px 0; } }
+
 @media screen and (min-width: 1600px) {
   .menu__list {
     padding: 0 55px; } }
@@ -581,6 +652,14 @@ template {
   .menu__list {
     padding: 0 43px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu__list {
+    padding: 0 55px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu__list {
+    padding: 0 25px; } }
+
 @media screen and (min-width: 1600px) {
   .menu__item_line {
     margin: 35px 0; } }
@@ -588,6 +667,36 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .menu__item_line {
     margin: 25px 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu__item_line {
+    margin: 40px 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu__item_line {
+    margin: 35px 0 46px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .menu__item:first-child:after {
+    right: 35px;
+    top: 46px;
+    width: 15px;
+    height: 10px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu__item:first-child:after {
+    right: 35px;
+    top: 46px;
+    width: 15px;
+    height: 10px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu__item:first-child:after {
+    right: 35px;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    background-size: 150% 150%; } }
 
 @media screen and (min-width: 1600px) {
   .raiffeisen-btns {
@@ -599,6 +708,16 @@ template {
     height: 25px;
     margin: 57px 0 60px 42px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .raiffeisen-btns {
+    height: 37px;
+    margin: 70px 0 46px 55px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .raiffeisen-btns {
+    height: 40px;
+    margin: 30px 0 49px 26px; } }
+
 @media screen and (min-width: 1600px) {
   .raiffeisen-btns__item_online {
     width: 117px; } }
@@ -606,6 +725,14 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .raiffeisen-btns__item_online {
     width: 90px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .raiffeisen-btns__item_online {
+    width: 130px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .raiffeisen-btns__item_online {
+    width: 150px; } }
 
 @media screen and (min-width: 1600px) {
   .raiffeisen-btns__item_dealer {
@@ -615,6 +742,14 @@ template {
   .raiffeisen-btns__item_dealer {
     width: 55px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .raiffeisen-btns__item_dealer {
+    width: 80px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .raiffeisen-btns__item_dealer {
+    width: 115px; } }
+
 @media screen and (min-width: 1600px) {
   .raiffeisen-btns__item {
     height: 35px; } }
@@ -622,6 +757,14 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .raiffeisen-btns__item {
     height: 25px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .raiffeisen-btns__item {
+    height: 37px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .raiffeisen-btns__item {
+    height: 40px; } }
 
 @media screen and (min-width: 1600px) {
   .inner-block {
@@ -633,16 +776,41 @@ template {
     top: 100px;
     width: 100%; } }
 
-@media screen and (min-width: 1600px) {
-  .inner-block__image {
-    margin-top: 3px;
-    margin-right: 20px;
-    width: 392px; } }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner-block {
+    top: 100px;
+    width: 100%; } }
 
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .inner-block__image {
-    margin-right: 50px;
-    width: 353px; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .inner-block {
+    top: 100px;
+    width: 100%; } }
+
+.inner-block__image {
+  float: left; }
+  @media screen and (min-width: 1600px) {
+    .inner-block__image {
+      margin: 3px 0 0 20px;
+      width: 392px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .inner-block__image {
+      margin-right: 50px;
+      width: 353px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -15%);
+      -ms-transform: translate(-50%, -15%);
+      transform: translate(-50%, -15%);
+      width: 270px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .inner-block__image {
+      float: none;
+      display: block;
+      margin: -120px 0 -60px;
+      height: 340px; } }
 
 @media screen and (min-width: 1600px) {
   .inner-block__title {
@@ -651,6 +819,14 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .inner-block__title {
     margin: 50px 0 15px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner-block__title {
+    margin: 50px 0 15px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .inner-block__title {
+    margin: 52px 25px 0; } }
 
 @media screen and (min-width: 1600px) {
   .inner-block__column {
@@ -662,6 +838,16 @@ template {
     margin-right: 38px;
     width: 230px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner-block__column {
+    margin-right: 90px;
+    width: 230px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .inner-block__column {
+    width: calc(100% - 50px);
+    margin: 0 25px; } }
+
 @media screen and (min-width: 1600px) {
   .footer {
     height: 110px; } }
@@ -670,13 +856,32 @@ template {
   .footer {
     height: 69px; } }
 
-@media screen and (min-width: 1600px) {
-  .footer__text {
-    margin: 18px 55px; } }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    height: 136px; } }
 
-@media screen and (min-width: 1024px) and (max-width: 1599px) {
-  .footer__text {
-    margin: 12px 42px; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    height: 60px; } }
+
+.footer__text {
+  width: auto; }
+  @media screen and (min-width: 1600px) {
+    .footer__text {
+      margin: 18px 55px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .footer__text {
+      margin: 12px 42px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer__text {
+      margin: 30px 70px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer__text {
+      position: absolute;
+      right: 25px;
+      top: 40px;
+      display: inline;
+      width: 98px; } }
 
 @media screen and (min-width: 1600px) {
   .download-services {
@@ -685,6 +890,17 @@ template {
 @media screen and (min-width: 1024px) and (max-width: 1599px) {
   .download-services {
     margin: 0 41px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .download-services {
+    margin: 0 73px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .download-services {
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    display: inline; } }
 
 @media screen and (min-width: 1600px) {
   .download-services__icon {
@@ -697,6 +913,16 @@ template {
     width: 30px;
     height: 25px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .download-services__icon {
+    width: 30px;
+    height: 25px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .download-services__icon {
+    width: 30px;
+    height: 25px; } }
+
 @media screen and (min-width: 1600px) {
   .download-services__text {
     margin: 11px 10px; } }
@@ -705,21 +931,37 @@ template {
   .download-services__text {
     margin: 4px 10px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .download-services__text {
+    margin: 4px 10px; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .download-services__text {
+    margin: -5px 16px;
+    width: 70px; } }
+
 .menu {
   display: none;
-  -webkit-box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: -12px 0 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   right: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  background: #f2f1f1; }
+  background: #f2f1f1;
+  z-index: 11; }
   .menu__list {
     list-style: none; }
   .menu__item {
     width: 100%; }
+    .menu__item:first-child:after {
+      position: absolute;
+      content: "";
+      cursor: pointer;
+      background: url("../assets/close.png") no-repeat; }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .menu__item:nth-child(n+6) {
+        margin: 24px 0; } }
   .menu__item_line {
     height: 1px;
     width: 64px;
@@ -759,9 +1001,21 @@ template {
 
 .inner-block {
   position: absolute; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block {
+      height: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__image-container {
+      position: relative;
+      width: 100%; } }
   .inner-block__image {
-    display: block;
-    float: left; }
+    display: block; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__info {
+      height: inherit;
+      position: absolute;
+      top: 24%;
+      margin-left: 87px; } }
   .inner-block__column {
     position: relative;
     display: inline-block;
@@ -789,10 +1043,9 @@ template {
   display: none; }
 
 .custom-header {
-  position: absolute;
   display: block;
   top: 0; }
-  .custom-header .custom-header__language:after, .custom-header .custom-header__language_opened:after {
+  .custom-header .custom-header__language:after {
     position: absolute;
     left: 22px;
     width: 15px;
@@ -818,24 +1071,41 @@ template {
     .custom-header__language_opened:after {
       bottom: 8px;
       -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
       transform: rotate(180deg); }
   .custom-header__menu {
     position: absolute;
-    font-size: 12px;
-    right: 15px;
-    top: 45px;
-    opacity: 0.7; }
+    opacity: 0.7;
+    cursor: pointer;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s; }
+    @media screen and (min-width: 1600px) {
+      .custom-header__menu {
+        display: none; } }
+    @media screen and (min-width: 1024px) and (max-width: 1599px) {
+      .custom-header__menu {
+        right: 15px;
+        top: 45px;
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .custom-header__menu {
+        right: 35px;
+        top: 40px; } }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .custom-header__menu {
+        display: none; } }
     .custom-header__menu:before {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      left: -30px;
+      width: 15px;
+      height: 12px;
+      left: -28px;
+      top: 2px;
       content: "";
       background: url("../assets/menu.png") no-repeat; }
+    .custom-header__menu:hover {
+      opacity: 0.5; }
 
 .page {
   position: relative;
@@ -844,6 +1114,15 @@ template {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  @media screen and (min-width: 1600px) {
+    .page {
+      border: 22px solid white; } }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
+    .page {
+      border: 17px solid white; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .page {
+      border: 19px solid white; } }
 
 .footer {
   position: absolute;
@@ -851,9 +1130,11 @@ template {
   width: 100%;
   background-color: #f8f7f7;
   padding-top: 25px; }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer {
+      background-color: #f2f1f1; } }
   .footer__text {
     color: black;
-    width: 100%;
     opacity: 0.5; }
 
 .raiffeisen-btns {
@@ -872,15 +1153,29 @@ template {
       border-color: #6d5b66; }
     .raiffeisen-btns__item_online {
       color: #ffffff;
+      vertical-align: center;
       background-color: #b3aaaf; }
     .raiffeisen-btns__item_dealer {
-      color: #4c3440; }
+      color: #4c3440;
+      vertical-align: center; }
 
 .inner-block {
   position: absolute; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block {
+      height: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__image-container {
+      position: relative;
+      width: 100%; } }
   .inner-block__image {
-    display: block;
-    float: left; }
+    display: block; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .inner-block__info {
+      height: inherit;
+      position: absolute;
+      top: 24%;
+      margin-left: 87px; } }
   .inner-block__column {
     position: relative;
     display: inline-block;
@@ -927,5 +1222,8 @@ template {
     -webkit-transition: opacity .3s;
     -o-transition: opacity .3s;
     transition: opacity .3s; }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .download-services__text:after {
+        margin: 15px -65px; } }
     .download-services:hover .download-services__text:after {
       opacity: 0; }

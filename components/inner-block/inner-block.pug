@@ -35,7 +35,8 @@
 
 mixin inner-block(content,params)
   .inner-block&attributes(attributes)
-    img(src=info.image.src alt=info.image.alt).inner-block__image
+    .inner-block__image-container
+      img(src=info.image.src alt=info.image.alt).inner-block__image
     .inner-block__info
       h1.inner-block__title!=info.title
       +inner-block__text(info.list)
