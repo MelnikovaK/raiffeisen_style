@@ -5,7 +5,9 @@
       @content;
     }
   }
-
+  position: relative;
+  top: 0;
+  width: 100%;
 
   @include DESKTOP {
     margin: vw(0) vw($DOWNLOAD-LINK-MARGIN-LEFT);  
@@ -17,14 +19,13 @@
     margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-TABLET;  
   }
   @include MOBILE {
+    display: inline;
     height: 40px;
     width: 300px;
-    margin: 0 20px;  
-
-    display: inline;
-    // position: absolute;
-    // left: vw-m(15px);
-    // top: 40px;
+    margin: 60px 20px;  
+    @media (orientation: landscape) {
+      margin: 40px 40px;  
+    }
   }
 
   &__icon {
@@ -35,7 +36,12 @@
       margin-top: vw(6px);
     }
     @include MOBILE {
-      width: vw-m(25px);
+      width: vw-m(30px);
+      margin: 15px 0;
+      @media (orientation: landscape) {
+        width: vw-m(21px);
+        margin: 8px 0;
+      }
     }
   }
 
@@ -79,8 +85,12 @@
       margin: 4px 10px;
     }
     @include MOBILE {
-      margin: 5px vw-m(10px);
+      margin: 13px vw-m(10px);
       width: 70px;
+      @media (orientation: landscape) {
+        margin: 12px vw-m(10px);
+        width: 70px;
+      }
     }
 
   }
