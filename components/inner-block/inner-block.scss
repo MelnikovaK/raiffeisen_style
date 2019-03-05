@@ -1,34 +1,98 @@
 .inner-block {
-  @extend %INNER-BLOCK-COMPONENT;
-  position: absolute;
+  position: relative;
+  height: auto;
+
+  @include DESKTOP {
+    width: vw($INNER-BLOCK-WIDTH);
+  }
+  @include TABLET-L {
+    width: 100%;
+  }
   @include TABLET {
+    width: 100%;
     height: 100%;
+  }
+  @include MOBILE {
+    display: block;
+    width: 100%;
+    top: 0;
+    padding: 0 0 $HEADER-CONTAINER-HEIGHT-MOBILE 0;
   }
 
   &__image-container {
     @include TABLET {
       position: relative;
-      // text-align: center;
-      width: 100%;
+      height: 340px;
+    }
+
+    @include MOBILE {
+      position: relative;
+      height: 240px;
     }
   }
+
   &__image {
     display: block;
-    @extend %IMAGE-COMNPONENT;
+    float: left;  
+
+    @include DESKTOP {
+      margin: vw(3px 0 0 20px);
+      width: vw($IMAGE-WIDTH);
+    }
+    @include TABLET-L {
+      margin-right: 50px;
+      width: $IMAGE-WIDTH-LAPTOP;
+    }
+    @include TABLET {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50% );
+      height: 340px;
+    }
+    @include MOBILE {
+      float: none;
+      position: relative;
+      display: block;
+      top:60%;
+      left: 50%;
+      transform: translate( -50%, -50% );
+      width: 270px;
+    }
+  }
+
+  &__text {
+    @include TABLET {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_light {
+      color: $LIGHT-TEXT-COLOR;
+    }
   }
 
   &__info {
     @include TABLET {
-      height: inherit;
-      position: absolute;
-      top: 24%;
+      position: relative;
+      height: auto;
       margin-left:$TITLE-MARGIN-LEFT;
     }
   }
 
   &__title {
-    @extend %TITLE-COMPONENT;
     @extend %H2;
+    @include DESKTOP {
+      margin: vw($TITLE-MARGIN-TOP 0 $TITLE-MARGIN-BOTTOM);
+    }
+    @include TABLET-L {
+      margin: $TITLE-MARGIN-TOP-LAPTOP 0 $TITLE-MARGIN-BOTTOM-LAPTOP;
+    }
+    @include TABLET {
+      margin: 0 0 $TITLE-MARGIN-BOTTOM-LAPTOP;
+    }
+    @include MOBILE {
+      margin: $TITLE-MARGIN-TOP-MOBILE vw-m($TITLE-MARGIN-LEFT-MOBILE) 0;
+   } 
   }
 
   &__column {
@@ -36,33 +100,54 @@
     display: inline-block;
     vertical-align: top;
 
-    @extend %COLUMN-COMPONENT;
+    @include DESKTOP {
+      margin-right: vw($COLUMN-MARGIN);
+      width: vw($COLUMN-TEXT-WIDTH);
+    }
+    @include TABLET-L {
+      margin-right: $COLUMN-MARGIN-LAPTOP;
+      width: $COLUMN-TEXT-WIDTH-LAPTOP;
+    }
+    @include TABLET {
+      margin-right: $COLUMN-MARGIN-TABLET;
+      width: $COLUMN-TEXT-WIDTH-TABLET;
+    }
+    @include MOBILE {
+      display: block;
+      width: $COLUMN-TEXT-WIDTH-MOBILE;
+      margin: 0 vw-m($TITLE-MARGIN-LEFT-MOBILE);
+    }
+  }
+  &__text-item {
+    @extend %TEXT;
+    margin: 18px 0;
+    @include DESKTOP {
+      margin: vw(18px) vw(0);
+    }
   }
 
   &__link {
-    position: relative;
     @extend %TEXT;
+    position: relative;
+    color: $LIGHT-TEXT-COLOR;
 
     &:after {
-      content: "";
       position: absolute;
       display: inline-block;
       bottom: 7px;
       left: 53px;
       width: 20px;
       height: 6px;
-      background:url('../assets/arrow.png') no-repeat;
       opacity: 1;
+      background: url('../assets/arrow.png') no-repeat;
+      content: "";
       cursor: pointer;
-    }
-  }
-
-  &__text-item {
-    margin: 18px 0;
-    @extend %TEXT;
-
-    &:nth-child(3):last-child {
-      opacity: 0.6;
+      @include DESKTOP {
+        bottom: vw(7px);
+        left: vw(53px);
+        width: vw(20px);
+        height: vw(6px);
+      }
     }
   }
 }

@@ -1,19 +1,48 @@
 .footer {
   position: absolute;
+  padding-top: $FOOTER-PADDING;
   bottom: 0;
   width: 100%;
   background-color: $FOOTER_COLOR;
-  padding-top: $FOOTER-PADDING;
-  @extend %FOOTER-COMPONENT;
+  @include DESKTOP {
+    height: vh($FOOTER-HEIGHT);
+  }
+  @include TABLET-L {
+    height: $FOOTER-HEIGHT-LAPTOP;
+  }
+  @include TABLET {
+    height: $FOOTER-HEIGHT-TABLET;
+  }
   @include MOBILE {
+    height: $FOOTER-HEIGHT-MOBILE;
     background-color: $MENU_COLOR;
+
+    @media (orientation: landscape) {
+      position: relative;
+    }
   }
 
   &__text {
-    color: black;
-    
-    opacity: 0.5;
     @extend %FOOTER-TEXT;
-    @extend %FOOTER-TEXT-COMPONENT;
+    width: auto;
+    color: black;
+    opacity: 0.5;
+    
+    @include DESKTOP {
+      margin: vw($FOOTER-MARGIN $FOOTER-MARGIN-LEFT);
+    }
+    @include TABLET-L {
+      margin: $FOOTER-MARGIN-LAPTOP $FOOTER-MARGIN-LEFT-LAPTOP;
+    }
+    @include TABLET {
+      margin: $FOOTER-MARGIN-TABLET $FOOTER-MARGIN-LEFT-TABLET;
+    }
+    @include MOBILE {
+      display: inline;
+      position: absolute;
+      right: vw-m(25px);
+      top: 40px;
+      width: 98px;
+    }
   }
 }

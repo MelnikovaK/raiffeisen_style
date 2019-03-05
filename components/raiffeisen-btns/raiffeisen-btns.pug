@@ -5,7 +5,9 @@
 //   ];
 mixin raiffeisen-btns(content, params)
   .raiffeisen-btns&attributes(attributes)
-    a(class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#") Raiffeisen.Online
-    a(class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#") R.Dealer
-    //- each button in buttons_params
-    //-   +button(button)
+    a(class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#")  
+      span.raiffeisen-btns__text Raiffeisen.Online
+    a(class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#") 
+      span.raiffeisen-btns__text R.Dealer
+  //- each button in buttons_params
+  //-   +button(button)

@@ -2,18 +2,47 @@
 
   display: block;
 
-  @extend %BUTTONS-COMPONENT;
+  @include DESKTOP {
+    height: vh($BUTTONS-HEIGHT);
+    margin: vw($BUTTONS-MARGIN-TOP) vw(0) vw($BUTTONS-MARGIN-BOTTOM $BUTTONS-MARGIN-LEFT);  
+  }
+  @include TABLET-L {
+    height: $BUTTONS-HEIGHT-LAPTOP;
+    margin: $BUTTONS-MARGIN-TOP-LAPTOP 0 $BUTTONS-MARGIN-BOTTOM-LAPTOP $BUTTONS-MARGIN-LEFT-LAPTOP;  
+  }
+  @include TABLET {
+    height: $BUTTONS-HEIGHT-TABLET;
+    margin: $BUTTONS-MARGIN-TOP-TABLET 0 $BUTTONS-MARGIN-BOTTOM-TABLET $BUTTONS-MARGIN-LEFT-TABLET;  
+  }
+  @include MOBILE {
+    height: $BUTTONS-HEIGHT-MOBILE;
+    margin: $BUTTONS-MARGIN-TOP-MOBILE 0 $BUTTONS-MARGIN-BOTTOM-MOBILE vw-m($BUTTONS-MARGIN-LEFT-MOBILE);  
+  }
+
+  &__text {
+    margin: auto;
+  }
 
   &__item {
-    display: inline-block;
-    // line-height: 35px;
-    text-align: center;
+    @extend %RAIFFEISEN-BTN;
+    position: relative;
+    display: inline-flex;
     text-decoration: none;
     border: 1px solid $NORMAL_BUTTON_COLOR;
     transition: background .3s, color .3s, border .3s;
-    @extend %BUTTON-COMPONENT;
+    @include DESKTOP {
+      height: vh($BUTTONS-HEIGHT);
+    }
+    @include TABLET-L {
+      height: $BUTTONS-HEIGHT-LAPTOP;  
+    }
+    @include TABLET {
+      height: $BUTTONS-HEIGHT-TABLET;  
+    }
+    @include MOBILE {
+      height: $BUTTONS-HEIGHT-MOBILE;  
+    }
 
-    @extend %RAIFFEISEN-BTN;
     
     &:hover {
       background-color: $HOVER_BUTTON_COLOR;
@@ -23,16 +52,36 @@
 
     &_online {
       color: #ffffff;
-      vertical-align: center;
       background-color: $NORMAL_BUTTON_COLOR;
-      @extend %ONLINE-BUTTON-COMPONENT;
+      @include DESKTOP {
+        width: vw($ONLINE-BUTTON-WIDTH);
+      }
+      @include TABLET-L {
+        width: $ONLINE-BUTTON-WIDTH-LAPTOP;
+      }
+      @include TABLET {
+        width: $ONLINE-BUTTON-WIDTH-TABLET;
+      }
+      @include MOBILE {
+        width: vw-m($ONLINE-BUTTON-WIDTH-MOBILE);
+      }
     }
     
 
     &_dealer {
       color: $BASE-COLOR;
-      vertical-align: center;
-      @extend %DEALER-BUTTON-COMPONENT;
+      @include DESKTOP {
+        width: vw($DEALER-BUTTON-WIDTH);
+      }
+      @include TABLET-L {
+        width: $DEALER-BUTTON-WIDTH-LAPTOP;
+      }
+      @include TABLET {
+        width: $DEALER-BUTTON-WIDTH-TABLET;
+      }
+      @include MOBILE {
+        width: vw-m($DEALER-BUTTON-WIDTH-MOBILE);
+      }
     }
   }
 }

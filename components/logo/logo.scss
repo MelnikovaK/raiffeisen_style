@@ -1,9 +1,44 @@
 .logo {
-	position: absolute;
-	@extend %LOGO-COMPONENT;
+  position: absolute;
+  width: $LOGO-WIDTH-DEFAULT;
+  top: 55px;  
+  z-index: 5;
+
+  @include DESKTOP {
+    top: vw(55px);  
+    left: vw(53px);
+    height: vw($LOGO-HEIGHT-DESKTOP);
+    width: vw($LOGO-WIDTH-DEFAULT);
+  }
+  @include TABLET-L {
+    top: 42px;
+    left: 40px;
+  }
+  @include TABLET {
+    top: 40px;
+    left: 35px;
+    width: 182px;
+    height: $LOGO-HEIGHT-LAPTOP;
+  }
+  @include MOBILE {
+    top: 15px;
+    left: 15px;
+    width: 182px;
+    height: $LOGO-HEIGHT-MOBILE;
+  }
 }
 
 .logo_menu_opened {
-	position: absolute;
-	@extend %LOGO-MENU-OPENED;
+  position: absolute;
+  top: 42px;
+  left: 40px;
+  width: 240px;
+  height: 90px;
+
+  @include DESKTOP {
+    top: vw(42px);
+    left: vw(40px);
+    width: vw(240px);
+    height: vw(90px);
+  }
 }

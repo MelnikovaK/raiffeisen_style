@@ -13,7 +13,11 @@
 
 
 mixin menu(content,params)
+  input(id="close-menu" type="checkbox" checked="false").menu__checkbox
   nav.menu&attributes(attributes)
+    label(for="close-menu").menu__checkbox-container
+      p.rotate-left
+      p.rotate-right
     ul.menu__list
       each item in menu_items
         +menu__item(item)

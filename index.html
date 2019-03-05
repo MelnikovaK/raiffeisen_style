@@ -14,46 +14,60 @@
   </head>
   <body>
     <div class="page">
-      <div class="custom-header">
-        <div class="logo"><img src="assets/logo.svg"/></div>
-        <div class="custom-header__container">
-          <div class="custom-header__contacts">+7 (495) 662 76 77</div>
-          <div class="custom-header__line"></div>
-          <div class="custom-header__language">
-            <div class="language">
-              <label class="language__label" data-value="ru">RU</label>
-              <ul class="language__list">
-                <li class="language__item" data-value="ru">RU</li>
-                <li class="language__item" data-value="en">EN</li>
-              </ul>
+      <div class="content-container">
+        <div class="custom-header">
+          <div class="logo"><img src="assets/logo.svg"/></div>
+          <div class="custom-header__container">
+            <div class="custom-header__contacts">+7 (495) 662 76&nbsp;77</div>
+            <div class="custom-header__line"></div>
+            <div class="custom-header__language">
+              <div class="language">
+                <label class="language__label" data-value="ru">RU</label>
+                <ul class="language__list">
+                  <li class="language__item" data-value="ru">RU</li>
+                  <li class="language__item" data-value="en">EN</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="custom-header__menu">МЕНЮ</div>
-        </div>
-      </div>
-      <div class="inner-block">
-        <div class="inner-block__image-container"><img class="inner-block__image" src="assets/image.png" alt="картинка 1"/></div>
-        <div class="inner-block__info">
-          <h1 class="inner-block__title">Сохранить и преумножить</h1>
-          <div class="inner-block__text">
-            <div class="inner-block__column">
-              <p class="inner-block__text-item">Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.Ut nec vide ubique vivendum, dicat mentitum ne sit.
-              </p>
-              <p class="inner-block__text-item"> Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur.
-              </p>
+          <label for="close-menu">
+            <div class="custom-header__menu">МЕНЮ</div>
+            <div class="custom-header__menu-icon">
+              <p></p>
+              <p></p>
+              <p></p>
             </div>
-            <div class="inner-block__column">
-              <p class="inner-block__text-item"> Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu
-              </p>
-              <p class="inner-block__text-item">, id mea dolorem verterem. Albucius eligendi temporibus eu nam. Ei sed tamquam pericula, ut pro aeque iusto vocent Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem d. 
-              </p>
-              <p class="inner-block__text-item">Узнать об инвестиционных решениях  Friderich Riaffeisen <a class="inner-block__link" href="#">в Вене</a>
-              </p>
+          </label>
+        </div>
+        <div class="inner-block">
+          <div class="inner-block__image-container"><img class="inner-block__image" src="assets/image.png" alt="картинка 1"/></div>
+          <div class="inner-block__info">
+            <h1 class="inner-block__title">Сохранить и преумножить</h1>
+            <div class="inner-block__text">
+              <div class="inner-block__column">
+                <p class="inner-block__text-item">Lorem ipsum dolor sit amet, latine perpetua in nec. Vix cu posse partiendo. Nostrud urbanitas has et. Et mei alii legendossuavitate, pro at duis vituperata, cum causae voluptatum te. Vix dicant adolescens ea, mea in vero scripta delicata, ut mei appareat dissentiunt.Ut nec vide ubique vivendum, dicat mentitum ne sit.
+                </p>
+                <p class="inner-block__text-item"> Ius ea elitr tacimates adversarium. Ne pri movet dicunt, at his feugait adolescens dissentiunt. Consulatu pertinacia te vim.In eum stet everti legendos, ne has doctus commune apeirian, an usu nulla laudem consequuntur.
+                </p>
+              </div>
+              <div class="inner-block__column">
+                <p class="inner-block__text-item"> Pro ut complectitur necessitatibus, et eum porro tibique deseruisse. Mutat vulputate mel id, paulo quaeque lucilius ad nam. Dolore omittam tincidunt ut vim, usu ex doming tincidunt interpretaris, nam causae tincidunt ne. Exerci iriure aliquam eu usu
+                </p>
+                <p class="inner-block__text-item">, id mea dolorem verterem. Albucius eligendi temporibus eu nam. Ei sed tamquam pericula, ut pro aeque iusto vocent Pri ad munere reformidans, etiam utamur molestie eu qui. In sed aperiam dissentias. Illum nulla mel in, nam dolores reprehendunt cu. An ius mediocrem d. 
+                </p>
+                <p class="inner-block__text-item"> <span class='inner-block__text_light'> Узнать об инвестиционных решениях  Friderich Riaffeisen </span><a class="inner-block__link" href="#">в Вене</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <input class="menu__checkbox" id="close-menu" type="checkbox" checked="false"/>
       <nav class="menu">
+        <label class="menu__checkbox-container" for="close-menu">
+          <p class="rotate-left"></p>
+          <p class="rotate-right"></p>
+        </label>
         <ul class="menu__list">
           <li class="menu__item"><a class="menu__item-link" href="#">Сохранить и преумножить</a></li>
           <li class="menu__item"><a class="menu__item-link" href="#">Получить финансирование</a></li>
@@ -64,7 +78,7 @@
           <li class="menu__item"><a class="menu__item-link" href="#">О нас</a></li>
           <li class="menu__item"><a class="menu__item-link" href="#">Контактная информация</a></li>
         </ul>
-        <div class="raiffeisen-btns"><a class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#">Raiffeisen.Online</a><a class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#">R.Dealer</a></div>
+        <div class="raiffeisen-btns"><a class="raiffeisen-btns__item raiffeisen-btns__item_online" href="#"> <span class="raiffeisen-btns__text">Raiffeisen.Online</span></a><a class="raiffeisen-btns__item raiffeisen-btns__item_dealer" href="#"> <span class="raiffeisen-btns__text">R.Dealer</span></a></div>
         <footer class="footer"><a class="download-services" href="#"><img class="download-services__icon" src="assets/iconpdf.png"/><span class="download-services__text">Скачать «Услуги FWR» </span></a>
           <div class="footer__text">© 2009-2017 АО«Райффайзенбанк»</div>
         </footer>

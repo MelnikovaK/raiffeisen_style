@@ -1,18 +1,22 @@
 .page {
   @extend %DEFAULT;
   position: relative;
-  background-color: $COLOR-BODY;
   height: 100%;
   width: 100%;
+  background-color: $COLOR-BODY;
+  overflow: auto;
   box-sizing: border-box;
+  overflow-x: hidden; 
   @include DESKTOP {
-    border: $PAGE-BORDER solid white;
+    border: vw($PAGE-BORDER) solid white;
   }
   @include TABLET-L {
     border: $PAGE-BORDER-LAPTOP solid white;
   }
-
   @include TABLET {
     border: $PAGE-BORDER-TABLET solid white;
+  }
+  @include MOBILE {
+    border: $PAGE-BORDER-MOBILE solid white;
   }
 }

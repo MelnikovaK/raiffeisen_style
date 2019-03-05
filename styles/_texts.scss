@@ -7,7 +7,7 @@
   line-height: 1.44;
   color: $BLACK;
   @include DESKTOP {
-    font-size: 18px;
+    font-size: vw(18px);
     line-height: 1.5;
   }
 }
@@ -22,7 +22,7 @@
   letter-spacing: 1px;
   color: $BASE-COLOR;
   @include DESKTOP {
-    font-size: 48px;
+    font-size: vw(48px);
   }
 }
 
@@ -35,7 +35,7 @@
   font-weight: 100;
   color: $DARK-BROWN;
   @include DESKTOP {
-    font-size: 32px;
+    font-size: vw(32px);
   }
 }
 
@@ -47,19 +47,14 @@
   line-height: 1.28;
   font-weight: 100;
   color: $BASE-COLOR;
-  @include MOBILE {
-    font-size: 15.75px;
+  @include DESKTOP {
+    font-size: vw(15.75px);
   }
   @include TABLET {
     font-size: 16px;
-    line-height: 2.3;
   }
   @include TABLET-L {
     font-size: 12px;
-    line-height: 2;
-  }
-  @include MOBILE {
-    line-height: 2.5;
   }
 }
 
@@ -83,7 +78,7 @@
     line-height: 1.95;
   }
   @include DESKTOP {
-    font-size: 14px;
+    font-size: vw(14px);
   }
 }
 
@@ -105,6 +100,9 @@
   @include TABLET-L {
     font-size: 9px;
   }
+  @include DESKTOP {
+    font-size: vw(12px);
+  }
 }
 
 /**
@@ -116,7 +114,7 @@
   font-weight: 100;
   color: $BASE-COLOR;
   @include DESKTOP {
-    font-size: 18px;
+    font-size: vw(18px);
     line-height: 1.5;
   }
   @include TABLET {
@@ -133,7 +131,7 @@
   font-weight: 100;
   color: $BASE-COLOR;
   @include DESKTOP {
-    font-size: 14px;
+    font-size: vw(14px);
   }
 }
 
@@ -153,5 +151,8 @@
   }
   @include TABLET-L {
     font-size: 15.75px;
+  }
+   @include DESKTOP {
+    font-size: vw(21px);
   }
 }

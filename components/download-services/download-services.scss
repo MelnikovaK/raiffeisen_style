@@ -5,16 +5,44 @@
       @content;
     }
   }
-  @extend %DOWNLOAD-SERVICES-COMPONENT;
+
+
+  @include DESKTOP {
+    margin: vw(0) vw($DOWNLOAD-LINK-MARGIN-LEFT);  
+  }
+  @include TABLET-L {
+    margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-LAPTOP;  
+  }
+  @include TABLET {
+    margin: 0 $DOWNLOAD-LINK-MARGIN-LEFT-TABLET;  
+  }
+  @include MOBILE {
+    height: 40px;
+    width: 300px;
+    margin: 0 20px;  
+
+    display: inline;
+    // position: absolute;
+    // left: vw-m(15px);
+    // top: 40px;
+  }
 
   &__icon {
     display: inline-block;
-    @extend %DOWNLOAD-ICON-COMPONENT;
+    width: 30px;
+    @include DESKTOP {
+      width: vw(45px);
+      margin-top: vw(6px);
+    }
+    @include MOBILE {
+      width: vw-m(25px);
+    }
   }
 
   &__text {
-    position: absolute;
+    @extend %FOOTER-LINK;
     display: inline-block;
+    position: absolute;
     color: $BASE-COLOR;
     text-decoration: none;
     transition: opacity .3s;
@@ -24,25 +52,36 @@
     }
 
     &:after {
-      content: "";
       position: absolute;
-      opacity: 1;
       width: 100%;
       height: 1px;
-      margin-top: -5px;
-      @include MOBILE {
-        margin: 15px -65px;
-      }
+      margin-top: vw(-5px);
+      opacity: 1;
+      content: "";
       background:url('dots.png');
       transition: opacity .3s;
 
+      @include MOBILE {
+        margin: 15px -65px;
+      }
       @include hover{
         opacity: 0;
       }
     }
 
-    @extend %FOOTER-LINK;
-    @extend %DOWNLOAD-TEXT-COMPONENT;
+    @include DESKTOP {
+      margin: vw(11px) vw(10px);
+    }
+    @include TABLET-L {
+      margin: 4px 10px;
+    }
+    @include TABLET {
+      margin: 4px 10px;
+    }
+    @include MOBILE {
+      margin: 5px vw-m(10px);
+      width: 70px;
+    }
 
   }
 }

@@ -1,5 +1,4 @@
 .menu {
-  display: none;
   @mixin active{
     .menu__item_active &{
       @content;
@@ -11,31 +10,152 @@
     }
   }
 
+  @mixin checked(){
+    .menu__checkbox:checked ~ & {
+      @content;
+    }
+  }
+  
   position: absolute;
   top: 0;
   right: 0;
-  box-sizing: border-box; 
   height: 100%;
+  overflow: auto;
+
+  box-sizing: border-box; 
   background: $MENU-COLOR;
   z-index: 11;
-  @extend %MENU-COMPONENT;
+  opacity: 1;
+
+  transition: right .3s ease-in-out;
+  @include DESKTOP {
+    padding-top: vh($MENU-PADDING);
+    width: vw($MENU-WIDTH);
+  }
+  @include TABLET-L {
+    padding-top: $MENU-PADDING-LAPTOP;
+    width: $MENU-WIDTH-LAPTOP;
+    box-shadow: -12px 0 10px rgba(0,0,0,0.1);
+  }
+  @include TABLET {
+    padding-top: $MENU-PADDING-TABLET;
+    width: $MENU-WIDTH-TABLET;
+    box-shadow: -12px 0 10px rgba(0,0,0,0.1);
+  }
+  @include MOBILE {
+    padding-top: vw-m($MENU-PADDING-MOBILE);
+    width: $MENU-WIDTH-MOBILE;
+    height: auto;
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  @include checked(){
+    right: -100%;
+  }
+
+  &__checkbox-container {
+    position: absolute;
+      cursor: pointer;
+      // background:url('../assets/close.png') no-repeat;
+      background-size: 100%;
+      content: "";
+
+      p{
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: $BASE-COLOR;
+      }
+      p.rotate-left {
+        transform: rotate(45deg);
+      }
+      p.rotate-right {
+        transform: rotate(135deg);
+      }
+      @include TABLET-L {
+        right: 35px;
+        top: 40px;
+        width: 14px;
+        height: 14px;
+      }
+      @include TABLET {
+        right: 35px;
+        top: 46px;
+        width: 18px;
+        height: 18px;
+      }
+      @include MOBILE {
+        right: 20px;
+        top: 18px;
+        width: 22px;
+        height: 22px;
+      }
+  }
+
+  &__checkbox {
+    display: none;
+  }
 
   &__list{
-    @extend %MENU-LIST-COMPONENT;
     list-style: none;
+    @include DESKTOP {
+      padding: vh(0) vw($MENU-ITEM-MARGIN-LEFT);
+    }
+    @include TABLET-L {
+      padding: 0 $MENU-ITEM-MARGIN-LEFT-LAPTOP;
+    }
+    @include TABLET {
+      padding: 0 $MENU-ITEM-MARGIN-LEFT-TABLET;
+    }
+    @include MOBILE {
+      margin: 0;
+      padding: 0 vw-m($MENU-ITEM-MARGIN-LEFT-MOBILE);
+    }
   }
 
   &__item {
-    width: 100%;
     @extend %MENU-ITEM;
-    @extend %MENU-ITEM-COMPONENT;
-    &:first-child:after {
-      @extend %MENU-CLOSE-COMPONENT;
-      position: absolute;
-      content: "";
-      cursor: pointer;
-      background:url('../assets/close.png') no-repeat;
-    } 
+    width: 100%;
+
+    @include DESKTOP {
+      margin: vh($MENU-ITEM-MARGIN) vw(0);
+    }
+    @include TABLET-L {
+      margin: $MENU-ITEM-MARGIN-LAPTOP 0;
+    }
+    @include TABLET {
+      margin: $MENU-ITEM-MARGIN-TABLET 0;
+    }
+    @include MOBILE {
+      margin: $MENU-ITEM-MARGIN-MOBILE 0 $MENU-ITEM-MARGIN-BOTTOM-MOBILE;
+    }
+
+    // &:first-child:after {
+    //   position: absolute;
+    //   cursor: pointer;
+    //   background:url('../assets/close.png') no-repeat;
+    //   background-size: 100%;
+    //   content: "";
+    //   @include TABLET-L {
+    //     right: 35px;
+    //     top: 46px;
+    //     width: 14px;
+    //     height: 14px;
+    //   }
+    //   @include TABLET {
+    //     right: 35px;
+    //     top: 46px;
+    //     width: 14px;
+    //     height: 14px;
+    //   }
+    //   @include MOBILE {
+    //     right: 20px;
+    //     top: 18px;
+    //     width: 18px;
+    //     height: 18px;
+    //   }
+    // } 
     &:nth-child(n+6) {
       @include MOBILE {
         margin: 24px 0;
@@ -48,7 +168,18 @@
     width: 64px;
     background: $BASE-COLOR;
     opacity: 0.2;
-    @extend %MENU-LINE-COMPONENT;
+    @include DESKTOP {
+      margin: vw($MENU-LINE-MARGIN 0);
+    }
+    @include TABLET-L {
+      margin: $MENU-LINE-MARGIN-LAPTOP 0;
+    }
+    @include TABLET {
+      margin: $MENU-LINE-MARGIN-TABLET 0;
+    }
+    @include MOBILE {
+      margin: $MENU-LINE-MARGIN-MOBILE 0 $MENU-LINE-MARGIN-BOTTOM-MOBILE;
+    }
   }
     
   &__item-link {
@@ -65,12 +196,12 @@
       font-weight: bold;
     }
     &:after{
-      content: "";
       position: absolute;
+      width: 100%;
       left: 0;
       bottom: 0;
       opacity: 0;
-      width: 100%;
+      content: "";
       border-bottom: 10px solid rgba($BASE-COLOR,0.2);
       transition: opacity .3s;
 
