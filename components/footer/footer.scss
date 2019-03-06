@@ -16,10 +16,7 @@
   @include MOBILE {
     height: $FOOTER-HEIGHT-MOBILE;
     background-color: $MENU_COLOR;
-
-    @media (orientation: landscape) {
-      position: relative;
-    }
+    position: relative;
   }
 
   &__text {

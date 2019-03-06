@@ -607,9 +607,8 @@ template {
       .menu__item:nth-child(n+6) {
         margin: 24px 0; } }
   .menu__item_line {
-    height: 1px;
+    border-bottom: 1px solid #4c3440;
     width: 64px;
-    background: #4c3440;
     opacity: 0.2; }
     @media screen and (min-width: 1280px) {
       .menu__item_line {
@@ -622,6 +621,7 @@ template {
         margin: 35px 0; } }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .menu__item_line {
+        height: 2.5px;
         margin: 40px 0 46px; } }
   .menu__item-link {
     position: relative;
@@ -663,7 +663,8 @@ template {
   @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .logo {
       top: 42px;
-      left: 40px; } }
+      left: 40px;
+      width: 180px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .logo {
       top: 40px;
@@ -701,8 +702,7 @@ template {
       width: 100%; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block {
-      width: 100%;
-      height: 100%; } }
+      width: 100%; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block {
       display: block;
@@ -712,7 +712,7 @@ template {
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block__image-container {
       position: relative;
-      height: 340px; } }
+      height: 310px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block__image-container {
       position: relative;
@@ -730,13 +730,14 @@ template {
         width: 353px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .inner-block__image {
+        float: none;
         position: relative;
-        top: 50%;
+        height: 340px;
+        top: 40%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        height: 340px; } }
+        transform: translate(-50%, -50%); } }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .inner-block__image {
         float: none;
@@ -747,15 +748,7 @@ template {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        width: 270px; } }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .inner-block__text {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
+        width: 260px; } }
   .inner-block__text_light {
     color: #6d5b66; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -771,10 +764,10 @@ template {
       margin: 50px 0 15px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block__title {
-      margin: 0 0 15px; } }
+      margin: 5px 0 14px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block__title {
-      margin: 80px 4.688vw 0; } }
+      margin: 65px 4.688vw 0; } }
   .inner-block__column {
     position: relative;
     display: inline-block;
@@ -861,7 +854,7 @@ template {
         width: 370px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .custom-header__container {
-        width: 390px;
+        width: 395px;
         right: 0; } }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .custom-header__container {
@@ -890,7 +883,10 @@ template {
         top: 52px;
         left: 25px;
         margin: -35px 0;
-        z-index: 10; } }
+        z-index: 10; }
+        .custom-header__contacts a {
+          text-decoration: none;
+          color: #231f20; } }
     @media screen and (min-width: 1280px) {
       .custom-header__contacts {
         top: 55px; } }
@@ -1035,13 +1031,11 @@ template {
       height: 69px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .footer {
-      height: 136px; } }
+      height: 115px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .footer {
       height: 60px;
-      background-color: #f2f1f1; } }
-  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-    .footer {
+      background-color: #f2f1f1;
       position: relative; } }
   .footer__text {
     width: auto;
@@ -1055,7 +1049,7 @@ template {
         margin: 12px 42px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .footer__text {
-        margin: 35px 70px; } }
+        margin: 5px 70px; } }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .footer__text {
         display: inline;
@@ -1077,11 +1071,11 @@ template {
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .raiffeisen-btns {
       height: 37px;
-      margin: 70px 0 46px 60px; } }
+      margin: 75px 0 46px 60px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .raiffeisen-btns {
       height: 40px;
-      margin: 35px 0 49px 5.313vw; } }
+      margin: 30px 0 49px 5.313vw; } }
   .raiffeisen-btns__text {
     margin: auto; }
   .raiffeisen-btns__item {
@@ -1151,8 +1145,7 @@ template {
       width: 100%; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block {
-      width: 100%;
-      height: 100%; } }
+      width: 100%; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block {
       display: block;
@@ -1162,7 +1155,7 @@ template {
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block__image-container {
       position: relative;
-      height: 340px; } }
+      height: 310px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block__image-container {
       position: relative;
@@ -1180,13 +1173,14 @@ template {
         width: 353px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .inner-block__image {
+        float: none;
         position: relative;
-        top: 50%;
+        height: 340px;
+        top: 40%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        height: 340px; } }
+        transform: translate(-50%, -50%); } }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .inner-block__image {
         float: none;
@@ -1197,15 +1191,7 @@ template {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        width: 270px; } }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .inner-block__text {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
+        width: 260px; } }
   .inner-block__text_light {
     color: #6d5b66; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1221,10 +1207,10 @@ template {
       margin: 50px 0 15px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inner-block__title {
-      margin: 0 0 15px; } }
+      margin: 5px 0 14px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .inner-block__title {
-      margin: 80px 4.688vw 0; } }
+      margin: 65px 4.688vw 0; } }
   .inner-block__column {
     position: relative;
     display: inline-block;
@@ -1282,7 +1268,7 @@ template {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .download-services {
-    margin: 0 73px; } }
+    margin: 0 75px; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .download-services {
@@ -1299,6 +1285,10 @@ template {
     .download-services__icon {
       width: 2.813vw;
       margin-top: 0.375vw; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .download-services__icon {
+      width: 40px;
+      margin: 15px 0; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .download-services__icon {
       width: 30px;
@@ -1343,7 +1333,7 @@ template {
       margin: 4px 10px; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .download-services__text {
-      margin: 4px 10px; } }
+      margin: 18px 10px; } }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .download-services__text {
       margin: 13px 3.125vw;

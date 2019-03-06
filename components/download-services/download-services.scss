@@ -30,6 +30,10 @@
       width: vw(45px);
       margin-top: vw(6px);
     }
+    @include TABLET {
+      width: 40px;
+      margin: 15px 0;
+    }
     @include MOBILE {
       width: 30px;
       margin: 15px 0;
@@ -78,7 +82,7 @@
       margin: 4px 10px;
     }
     @include TABLET {
-      margin: 4px 10px;
+      margin: 18px 10px;
     }
     @include MOBILE {
       margin: 13px vw-m(10px);

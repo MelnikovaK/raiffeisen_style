@@ -164,9 +164,8 @@
   }
 
   &__item_line {
-    height: 1px;
+    border-bottom: 1px solid $BASE-COLOR;
     width: 64px;
-    background: $BASE-COLOR;
     opacity: 0.2;
     @include DESKTOP {
       margin: vw($MENU-LINE-MARGIN 0);
@@ -178,6 +177,7 @@
       margin: $MENU-LINE-MARGIN-TABLET 0;
     }
     @include MOBILE {
+      height: 2.5px;
       margin: $MENU-LINE-MARGIN-MOBILE 0 $MENU-LINE-MARGIN-BOTTOM-MOBILE;
     }
   }
