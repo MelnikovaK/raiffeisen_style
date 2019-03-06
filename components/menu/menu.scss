@@ -26,7 +26,6 @@
   background: $MENU-COLOR;
   z-index: 11;
   opacity: 1;
-
   transition: right .3s ease-in-out;
   @include DESKTOP {
     padding-top: vh($MENU-PADDING);
@@ -52,45 +51,47 @@
 
   @include checked(){
     right: -100%;
+    @include DESKTOP {
+      right: 0;
+    }
   }
 
   &__checkbox-container {
     position: absolute;
-      cursor: pointer;
-      // background:url('../assets/close.png') no-repeat;
-      background-size: 100%;
-      content: "";
+    cursor: pointer;
+    background-size: 100%;
+    content: "";
 
-      p{
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background: $BASE-COLOR;
-      }
-      p.rotate-left {
-        transform: rotate(45deg);
-      }
-      p.rotate-right {
-        transform: rotate(135deg);
-      }
-      @include TABLET-L {
-        right: 35px;
-        top: 40px;
-        width: 14px;
-        height: 14px;
-      }
-      @include TABLET {
-        right: 35px;
-        top: 46px;
-        width: 18px;
-        height: 18px;
-      }
-      @include MOBILE {
-        right: 20px;
-        top: 18px;
-        width: 22px;
-        height: 22px;
-      }
+    p{
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $BASE-COLOR;
+    }
+    p.rotate-left {
+      transform: rotate(45deg);
+    }
+    p.rotate-right {
+      transform: rotate(135deg);
+    }
+    @include TABLET-L {
+      right: 35px;
+      top: 40px;
+      width: 14px;
+      height: 14px;
+    }
+    @include TABLET {
+      right: 35px;
+      top: 46px;
+      width: 18px;
+      height: 18px;
+    }
+    @include MOBILE {
+      right: 20px;
+      top: 18px;
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &__checkbox {
@@ -131,31 +132,6 @@
       margin: $MENU-ITEM-MARGIN-MOBILE 0 $MENU-ITEM-MARGIN-BOTTOM-MOBILE;
     }
 
-    // &:first-child:after {
-    //   position: absolute;
-    //   cursor: pointer;
-    //   background:url('../assets/close.png') no-repeat;
-    //   background-size: 100%;
-    //   content: "";
-    //   @include TABLET-L {
-    //     right: 35px;
-    //     top: 46px;
-    //     width: 14px;
-    //     height: 14px;
-    //   }
-    //   @include TABLET {
-    //     right: 35px;
-    //     top: 46px;
-    //     width: 14px;
-    //     height: 14px;
-    //   }
-    //   @include MOBILE {
-    //     right: 20px;
-    //     top: 18px;
-    //     width: 18px;
-    //     height: 18px;
-    //   }
-    // } 
     &:nth-child(n+6) {
       @include MOBILE {
         margin: 24px 0;
@@ -178,6 +154,7 @@
     }
     @include MOBILE {
       height: 2.5px;
+      width: 53px;
       margin: $MENU-LINE-MARGIN-MOBILE 0 $MENU-LINE-MARGIN-BOTTOM-MOBILE;
     }
   }
@@ -192,21 +169,21 @@
     }
       
     @include active{
-      color: rgba($BASE-COLOR,0.5); 
+      color: rgba($BASE-COLOR, 0.5); 
       font-weight: bold;
     }
     &:after{
       position: absolute;
-      width: 100%;
-      left: 0;
+      width: 104%;
+      left: -2%;
       bottom: 0;
       opacity: 0;
       content: "";
-      border-bottom: 10px solid rgba($BASE-COLOR,0.2);
+      border-bottom: 7px solid rgba($BASE-COLOR,0.2);
       transition: opacity .3s;
 
       @include active{
-        opacity: 1;
+        opacity: 0.8;
       }
     }
   }
