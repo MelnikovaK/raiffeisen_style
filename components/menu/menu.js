@@ -16,19 +16,8 @@ $(function(){
     //HANDLEBARS
     var source = document.getElementById( "tmpl-sidebar-menu" ).innerHTML;
     template = Handlebars.compile(source);
-    init_menu( content_id);
+    init_menu( content_id );
   });
-
-
-  // $(window).on("content:changed", function(evt, _content_id) {
-  //   content_id = _content_id;
-  //   $('.menu__item').each(function(i, e) {
-  //     $(e).removeClass('menu__item_active');
-  //     if( data.content[content_id].title[language] == $(e).text()) {
-  //       $(e).addClass('menu__item_active');
-  //     }
-  //   });
-  // });
 
   $(window).on("language:changed", function(evt, language_name) {
     language = language_name || data.start_language;
@@ -48,9 +37,11 @@ $(function(){
       menu.href = e.href;
       menu.content_id = e.content_id;
       menu.language = language;
-      if (menu.title == undefined) {
-        menu.class = 'menu__item_line';
+      if (e.content_id == page ) {
+        menu.class = 'menu__item_active';
+        console.log(page)
       }
+      if (menu.title == undefined) menu.class = 'menu__item_line';
       html += template(menu);
       menu.class = undefined;
     });
