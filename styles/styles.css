@@ -534,10 +534,10 @@ template {
       height: auto;
       min-height: 100%;
       overflow: auto; } }
-  .menu__checkbox:checked ~ .menu {
+  .language__checkbox:checked ~ .menu {
     right: -100%; }
     @media screen and (min-width: 1280px) {
-      .menu__checkbox:checked ~ .menu {
+      .language__checkbox:checked ~ .menu {
         right: 0; } }
   .menu__checkbox-container {
     position: absolute;
@@ -832,9 +832,37 @@ template {
           width: 1.25vw;
           height: 0.375vw; } }
 
-.language__list {
-  list-style: none;
-  display: none; }
+.language {
+  position: absolute; }
+  .language__list {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    list-style: none; }
+    .language__list_opened {
+      height: 60px; }
+  .language__item {
+    position: relative;
+    left: 0; }
+  .language__selector {
+    position: absolute;
+    top: 5px;
+    left: 22px;
+    width: 15px;
+    height: 10px;
+    content: "";
+    background: url("../assets/selector.png") no-repeat; }
+    @media screen and (min-width: 1280px) {
+      .language__selector {
+        left: 1.375vw;
+        top: 0.375vw;
+        width: 0.938vw;
+        height: 0.625vw; } }
+    .language__selector_opened:after {
+      bottom: 0.5vw;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
 
 .custom-header {
   display: block;
@@ -937,25 +965,6 @@ template {
         right: 45px;
         top: 53px;
         margin: -35px 0; } }
-    .custom-header__language:after {
-      position: absolute;
-      bottom: 5px;
-      left: 22px;
-      width: 15px;
-      height: 10px;
-      content: "";
-      background: url("../assets/selector.png") no-repeat; }
-      @media screen and (min-width: 1280px) {
-        .custom-header__language:after {
-          left: 1.375vw;
-          bottom: 0.313vw;
-          width: 0.938vw;
-          height: 0.625vw; } }
-    .custom-header__language_opened:after {
-      bottom: 0.5vw;
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      transform: rotate(180deg); }
   .custom-header__menu {
     position: absolute;
     opacity: 0.7;

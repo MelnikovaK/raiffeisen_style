@@ -1,15 +1,5 @@
--
-  var select_items = [
-  {value: 'ru', name: 'RU'},
-  {value: 'en', name: 'EN'}
-  ],
-    default_language = {
-      value: 'ru', name: 'RU'
-    };
-
 mixin language(content,params)
   .language&attributes(attributes)
-    label(data-value=default_language.value).language__label!=default_language.name 
-    ul.language__list
-      each item in select_items
-        li(data-value = item.value).language__item!=item.name  
+    label.language__label
+      .language__value
+      .language__selector

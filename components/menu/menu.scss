@@ -11,7 +11,7 @@
   }
 
   @mixin checked(){
-    .menu__checkbox:checked ~ & {
+    .language__checkbox:checked ~ & {
       @content;
     }
   }

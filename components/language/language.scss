@@ -1,6 +1,50 @@
 .language {
-  &__list {
+  position: absolute;
+
+  @mixin checked(){
+    .menu__checkbox:checked ~ & {
+      @content;
+    }
+  }
+
+ &__list {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
     list-style: none;
-    display: none;
+
+    &_opened {
+      height: 60px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    left: 0;
+  }
+
+  &__selector {
+    position: absolute;
+    top: 5px;
+    left: 22px;
+    width: 15px;
+    height: 10px;
+    content: "";
+    background:url('../assets/selector.png') no-repeat;
+
+    @include DESKTOP {
+      left: vw(22px);
+      top: vw(6px);
+      width: vw(15px);
+      height: vw(10px);
+    }
+  
+
+    &_opened {
+      &:after {
+        bottom: vw(8px);
+        transform: rotate(180deg)
+      } 
+    }
   }
 }

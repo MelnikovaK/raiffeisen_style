@@ -126,29 +126,6 @@
 
     }
 
-    &:after {
-      position: absolute;
-      bottom: 5px;
-      left: 22px;
-      width: 15px;
-      height: 10px;
-      content: "";
-      background:url('../assets/selector.png') no-repeat;
-
-      @include DESKTOP {
-        left: vw(22px);
-        bottom: vw(5px);
-        width: vw(15px);
-        height: vw(10px);
-      }
-    }
-
-    &_opened {
-      &:after {
-        bottom: vw(8px);
-        transform: rotate(180deg)
-      } 
-    }
   }
 
   &__menu {
