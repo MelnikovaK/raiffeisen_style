@@ -33,6 +33,7 @@
   } 
 
 
+
 mixin inner-block(content,params)
   .inner-block&attributes(attributes)
     .inner-block__image-container
@@ -50,3 +51,18 @@ mixin inner-block__text(content, params)
           p.inner-block__text-item&attributes(attributes)!=paragraph.text
             if (paragraph.link) 
               a(href=paragraph.link.href).inner-block__link!=paragraph.link.content
+
+
+mixin inner-block-template(content,params)
+  .inner-block&attributes(attributes)
+    script(id="tmpl-content-info" type="text/x-handlebars-template")  
+      .inner-block__image-container
+        img(src=info.image.src alt=info.image.alt).inner-block__image
+      .inner-block__info
+        h1.inner-block__title {{title}}
+        |{{#each columns}}
+        .inner-block__column
+          |{{#each this}}
+          p.inner-block__text-item {{this}}
+          |{{/each}} 
+        |{{/each}} 

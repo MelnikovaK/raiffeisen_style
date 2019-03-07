@@ -1,4 +1,5 @@
 mixin footer(content,params)
   footer.footer&attributes(attributes)
-    +download-services()
-    .footer__text © 2009-2017 АО«Райффайзенбанк»
+    script(id="tmpl-footer" type="text/x-handlebars-template")
+      +download-services()
+      .footer__text {{text}}

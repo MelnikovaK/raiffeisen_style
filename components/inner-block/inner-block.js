@@ -1,36 +1,46 @@
 $(function(){
-	var data,
-			language,
-			content_id;
+  var data,
+      language,
+      content_id;
 
-	var $inner_block = $('.inner-block');
-	var $inner_block_info = $('.inner-block__info');
+  var $inner_block = $('.inner-block');
+  var $inner_block_info = $('.inner-block__info');
 
-	$(window).on('main:ready', function( event, _data ) {
-		data = _data;
-		language = data.start_language;
-		content_id = data.start_content;
-		showContent();
-	});
+  $(window).on('main:ready', function( event, _data ) {
 
-	$(window).on('language:changed', function(evt, language_name ){
-		$content.empty();
-		language = language_name;
-		//init_content();
-	});
+    var source = document.getElementById( "tmpl-content-info" ).innerHTML;
+    template_info = Handlebars.compile(source);
 
-		function showContent(){
-			$inner_block_text.empty();
-			var _content = data.content[content_id];
+    data = _data;
+    language = data.start_language;
+    content_id = data.start_content;
+    showContent();
+  });
 
-			var content = {};
-			content.title = _content.title[language];
-			content.texts = _content.texts[language];
-			content.language = language;
 
-			var html = template( content );
-			// $( html ).appendTo( $( '.content' ) );
-		}
+  $(window).on("content:changed", function(evt, _content_id) {
+    content_id = _content_id;
+    showContent();
+  });
+
+  $(window).on('language:changed', function(evt, language_name ){
+    $inner_block_info.empty();
+    language = language_name;
+    showContent();
+  });
+
+  function showContent(){
+    $inner_block.empty();
+    var _content = data.content[content_id];
+
+    var content = {};
+    content.title = _content.title[language];
+    content.columns = _content.columns[language];
+    content.language = language;
+
+    var html = template_info( content );
+    $( html ).appendTo( $('.inner-block') );
+  }
 
 
 });

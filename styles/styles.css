@@ -837,6 +837,7 @@ template {
   .language__list {
     position: absolute;
     height: 0;
+    padding: 0;
     overflow: hidden;
     list-style: none; }
     .language__list_opened {

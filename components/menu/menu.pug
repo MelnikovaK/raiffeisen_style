@@ -34,3 +34,12 @@ mixin menu__item(content,classes)
   else
     li.menu__item_line
 
+
+mixin menu__template(menu_active_item)
+  .menu&attributes(attributes)
+    .menu__list
+    script(id="tmpl-sidebar-menu" type="text/x-handlebars-template")
+      p.menu__item( class="{{class}}" data-content-id="{{content_id}}")
+        a(href='{{href}}').menu__item-link {{title}}
+    +raiffeisen-btns
+    +footer()
